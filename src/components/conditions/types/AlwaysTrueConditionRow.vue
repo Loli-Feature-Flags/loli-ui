@@ -1,0 +1,10 @@
+<script setup lang="ts">
+import CheckCircleIcon from '@/components/icons/CheckCircleIcon.vue'
+</script>
+
+<template>
+  <div class="flex flex-row gap-6 items-center text-green-800">
+    <CheckCircleIcon class="icon-no-default size-4" />
+    <span class="text-sm">{{ $t('conditions.alwaysTrueCondition.message') }}</span>
+  </div>
+</template>

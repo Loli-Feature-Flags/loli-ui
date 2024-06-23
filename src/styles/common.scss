@@ -1,0 +1,31 @@
+* {
+}
+
+.focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ring-primary-500/60;
+}
+
+.focus-ring-with-validation {
+  @apply focus-ring;
+  @apply invalid:ring-red-500;
+}
+
+.icon:not(.nd):not(.icon-no-default) {
+  @apply size-[1.1em];
+}
+
+.dnd-ghost {
+  @apply bg-gray-100 rounded-md;
+
+  & * {
+    opacity: 0;
+  }
+}
+
+.drag-handle {
+  @apply cursor-grab;
+}
+
+.list-grid {
+  @apply grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-6;
+}

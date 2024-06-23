@@ -1,0 +1,23 @@
+<script setup lang="ts">
+import {
+  type StringArrayConditionOperator,
+  StringArrayConditionOperators
+} from '@loli-feature-flags/loli-sdk-js'
+import Select from '@/components/ui/Select.vue'
+
+const operatorModel = defineModel<StringArrayConditionOperator>()
+</script>
+
+<template>
+  <Select
+    v-model="operatorModel"
+    :options="
+      StringArrayConditionOperators.map((operator) => ({
+        value: operator,
+        label: $t(`spec.stringArrayCondition.operator.${operator}`)
+      }))
+    "
+    size="small"
+    fit
+  />
+</template>
