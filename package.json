@@ -1,6 +1,6 @@
 {
   "name": "@loli-feature-flags/loli-ui",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "keywords": [
     "featureflags",
     "flags",
@@ -47,7 +47,8 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@internationalized/date": "^3.5.4",
