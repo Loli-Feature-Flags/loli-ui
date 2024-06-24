@@ -21,7 +21,9 @@ import LoliUi from '@/views/LoliUi.vue'
 </script>
 
 <template>
-  <LoliUi class="loli-ui-styles-scoped" />
+  <div class="loli-ui-styles-scoped">
+    <LoliUi />
+  </div>
 </template>
 
 <style lang="scss">

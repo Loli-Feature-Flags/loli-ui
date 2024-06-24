@@ -37,7 +37,7 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div class="loli-ui text-gray-900 bg-white relative isolate" ref="loliUiRef">
+  <div class="p-4 rounded-md loli-ui text-gray-900 bg-white relative isolate" ref="loliUiRef">
     <Transition name="view-fade" :duration="300">
       <div v-if="!workbench.isRawSpecPresent">
         <InitializeSpecView v-if="config.isViewVisible('initializeSpec')" />

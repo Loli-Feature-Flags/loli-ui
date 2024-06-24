@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loli UI Development</title>
+  <style>
+      html {
+          padding: 0;
+          margin: 0;
+      }
+
+      body {
+          padding: 2em;
+      }
+  </style>
+</head>
+<body>
+<div id="loli-ui-container"></div>
+
+<script>
+  window.addEventListener("loli-ui-library-available", () => {
+    const LOCAL_STORAGE_SPEC_KEY = 'loli-workbench-spec'
+
+    function getState() {
+      const searchParams = new URLSearchParams(window.location.search)
+      const storedState = searchParams.get("loli_nav")
+      return storedState ? JSON.parse(storedState) : null
+    }
+
+    function getStoredSpec() {
+      return localStorage.getItem(LOCAL_STORAGE_SPEC_KEY)
+    }
+
+    function setStoredSpec(spec) {
+      localStorage.setItem(LOCAL_STORAGE_SPEC_KEY, JSON.stringify(spec))
+    }
+
+    const { updateNavigationState } = window.mountLoliUi(document.querySelector("#loli-ui-container"), {
+      initialSpec: getStoredSpec(),
+      initialNavigationState: getState(),
+      specChangeListener: (spec) => {
+        setStoredSpec(spec)
+      },
+      navigationStateChangeListener: (state, source, changeType) => {
+        if ( !state || source === "external") {
+          return
+        }
+
+        const url = new URL(window.location.href)
+
+        if ( state.view === "featureFlags" && !state.subview ) {
+          url.searchParams.delete("loli_nav")
+        } else {
+          url.searchParams.set("loli_nav", JSON.stringify(state))
+        }
+
+        switch ( changeType ) {
+          case "push":
+            window.history.pushState({ ...state }, null, url.href)
+            break;
+          case "replace":
+            window.history.replaceState({ ...state }, null, url.href)
+            break;
+        }
+      }
+    });
+
+    window.addEventListener('popstate', (event) => {
+      updateNavigationState(event.state)
+    })
+  });
+</script>
+</body>
+<script type="module" src="./dist/loli-ui.js"></script>
+</html>
