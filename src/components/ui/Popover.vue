@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { PopoverArrow, PopoverContent, PopoverPortal, PopoverRoot, PopoverTrigger } from 'radix-vue'
 import useLoliUiElementRef from '@/hooks/useLoliUiElementRef'
+import { useConfig } from '@/stores/config/store'
+
+const config = useConfig()
 
 const open = defineModel<boolean>('open', { default: false })
 defineProps<{
@@ -24,6 +27,7 @@ const loliUiElementRef = useLoliUiElementRef()
         :align="align"
         :side="side"
         :side-offset="offset ?? 4"
+        :style="`z-index: ${config.floatingZIndex}`"
       >
         <slot />
         <PopoverArrow class="fill-gray-300" :width="8" :height="4" />

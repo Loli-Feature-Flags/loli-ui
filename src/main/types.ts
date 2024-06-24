@@ -14,7 +14,7 @@ export type LoliUiMountOptions = {
   specChangeListener?: SpecChangeListener
   specIssueListener?: SpecIssueListener
   navigationStateChangeListener?: NavigationStateChangeListener
-  dialogZIndex?: number
+  floatingZIndex?: number
 }
 
 export type LoliUiMountResult = {

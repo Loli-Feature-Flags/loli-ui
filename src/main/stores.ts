@@ -41,7 +41,7 @@ export function initializeStores(mountOptions?: LoliUiMountOptions) {
     useConfig().registerNavigationChangeListener(mountOptions.navigationStateChangeListener)
   }
 
-  if (typeof mountOptions?.dialogZIndex === 'number') {
-    useConfig().setDialogZIndex(mountOptions.dialogZIndex)
+  if (typeof mountOptions?.floatingZIndex === 'number') {
+    useConfig().setDialogZIndex(mountOptions.floatingZIndex)
   }
 }

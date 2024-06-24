@@ -9,6 +9,9 @@ import {
 } from 'radix-vue'
 import useLoliUiElementRef from '@/hooks/useLoliUiElementRef'
 import { ref } from 'vue'
+import { useConfig } from '@/stores/config/store'
+
+const config = useConfig()
 
 export type HelpTooltipVariant = 'normal' | 'error'
 
@@ -60,6 +63,7 @@ const arrowVariantClasses: { [key in HelpTooltipVariant]: string } = {
             'rounded-md text-xs px-2 py-1 whitespace-pre-line',
             variantClasses[variant ?? 'normal']
           ]"
+          :style="`z-index: ${config.floatingZIndex}`"
           as="div"
         >
           <span><slot /></span>

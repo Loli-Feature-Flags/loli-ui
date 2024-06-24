@@ -18,7 +18,7 @@ export const useConfig = defineStore('config', () => {
   const changeListeners = ref<Set<NavigationStateChangeListener>>(new Set())
   const specIssueListeners = ref<Set<SpecIssueListener>>(new Set())
   const hiddenViews = ref<HideableView[]>([])
-  const dialogZIndex = ref<number>(2000)
+  const floatingZIndex = ref<number>(2000)
 
   // Spec change listener related functions
   function unregisterSpecChangeListener(specChangeListener: SpecChangeListener) {
@@ -94,8 +94,8 @@ export const useConfig = defineStore('config', () => {
     return !isViewHidden(view)
   }
 
-  function setDialogZIndex(zIndex: number) {
-    dialogZIndex.value = zIndex
+  function setFloatingZIndex(zIndex: number) {
+    floatingZIndex.value = zIndex
   }
 
   return {
@@ -111,7 +111,7 @@ export const useConfig = defineStore('config', () => {
     setHiddenViews,
     isViewHidden,
     isViewVisible,
-    dialogZIndex,
-    setDialogZIndex
+    floatingZIndex,
+    setDialogZIndex: setFloatingZIndex
   }
 })
