@@ -40,4 +40,8 @@ export function initializeStores(mountOptions?: LoliUiMountOptions) {
   if (mountOptions?.navigationStateChangeListener) {
     useConfig().registerNavigationChangeListener(mountOptions.navigationStateChangeListener)
   }
+
+  if (typeof mountOptions?.dialogZIndex === 'number') {
+    useConfig().setDialogZIndex(mountOptions.dialogZIndex)
+  }
 }

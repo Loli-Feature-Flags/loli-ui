@@ -12,6 +12,7 @@ import {
 } from 'radix-vue'
 import useLoliUiElementRef from '@/hooks/useLoliUiElementRef'
 import XMarkIcon from '@/components/icons/XMarkIcon.vue'
+import { useConfig } from '@/stores/config/store'
 
 export type DialogSize = 'small' | 'near-fullscreen' | 'fullscreen'
 
@@ -22,6 +23,8 @@ defineProps<{
   contentOnlyScroll?: boolean
   error?: boolean
 }>()
+
+const config = useConfig()
 
 const openModel = defineModel<boolean>('open', { default: false })
 const loliUiRef = useLoliUiElementRef()
@@ -35,7 +38,10 @@ const loliUiRef = useLoliUiElementRef()
 
     <DialogPortal :to="loliUiRef">
       <Transition name="fade">
-        <DialogOverlay class="bg-gray-700/50 w-full h-full fixed top-0 left-0" />
+        <DialogOverlay
+          class="bg-gray-700/50 w-full h-full fixed top-0 left-0"
+          :style="`z-index: ${config.dialogZIndex};`"
+        />
       </Transition>
 
       <Transition name="fade">
@@ -60,6 +66,7 @@ const loliUiRef = useLoliUiElementRef()
               'flex flex-col': contentOnlyScroll
             }
           ]"
+          :style="`z-index: ${config.dialogZIndex};`"
           v-bind="
             !description || hideDescription
               ? {
