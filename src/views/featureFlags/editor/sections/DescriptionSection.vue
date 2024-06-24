@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import FeatureFlagEditorSection from '@/views/featureFlags/editor/FeatureFlagEditorSection.vue'
-import type { FeatureFlag } from '@loli-feature-flags/loli-sdk-js'
+import type { FeatureFlag } from '@loli-feature-flags/loli-sdk'
 import TextArea from '@/components/ui/TextArea.vue'
 import Label from '@/components/ui/Label.vue'
 

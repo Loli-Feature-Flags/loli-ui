@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { StringCondition, StringConditionOperator } from '@loli-feature-flags/loli-sdk-js'
+import type { StringCondition, StringConditionOperator } from '@loli-feature-flags/loli-sdk'
 import StringConditionOperatorSelect from '@/components/conditions/inputs/StringConditionOperatorSelect.vue'
 import QuantifierSelector from '@/components/conditions/inputs/QuantifierSelector.vue'
 import StringOperands from '@/components/conditions/inputs/StringOperands.vue'

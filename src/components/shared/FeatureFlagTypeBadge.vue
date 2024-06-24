@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { FeatureFlagType } from '@loli-feature-flags/loli-sdk-js'
+import type { FeatureFlagType } from '@loli-feature-flags/loli-sdk'
 
 defineProps<{ type: FeatureFlagType }>()
 </script>

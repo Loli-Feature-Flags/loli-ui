@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Condition, ConditionSet } from '@loli-feature-flags/loli-sdk-js'
+import type { Condition, ConditionSet } from '@loli-feature-flags/loli-sdk'
 import ConditionSetConditionList from '@/components/conditions/ConditionSetConditionList.vue'
 import AddCondition from '@/components/conditions/add/AddCondition.vue'
 import Select, { type SelectOption } from '@/components/ui/Select.vue'

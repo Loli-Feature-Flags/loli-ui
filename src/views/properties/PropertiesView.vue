@@ -8,7 +8,7 @@ import CreatePropertyDialog from '@/views/properties/CreatePropertyDialog.vue'
 import PropertyList from '@/views/properties/PropertyList.vue'
 import { computed, watchEffect } from 'vue'
 import { useNavigation } from '@/stores/navigation/store'
-import type { Property } from '@loli-feature-flags/loli-sdk-js'
+import type { Property } from '@loli-feature-flags/loli-sdk'
 import EditPropertyDialog from '@/views/properties/EditPropertyDialog.vue'
 import { IssuesCarryOn } from '@/utils/issues'
 

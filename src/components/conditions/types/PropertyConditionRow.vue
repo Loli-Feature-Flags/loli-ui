@@ -2,7 +2,7 @@
 import PropertySelect from '@/components/conditions/inputs/PropertySelect.vue'
 import { useWorkbench } from '@/stores/workbench/store'
 import { computed, ref, watch } from 'vue'
-import type { Property, PropertyCondition } from '@loli-feature-flags/loli-sdk-js'
+import type { Property, PropertyCondition } from '@loli-feature-flags/loli-sdk'
 import { createDefaultConditionForProperty } from '@/utils/condition'
 import StringPropertyConditionRowExtension from '@/components/conditions/types/property/StringPropertyConditionRowExtension.vue'
 import BooleanArrayPropertyConditionRowExtension from '@/components/conditions/types/property/BooleanArrayPropertyConditionRowExtension.vue'

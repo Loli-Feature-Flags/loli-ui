@@ -12,7 +12,7 @@ import {
   LoliSpecMalformedJsonError,
   LoliSpecSemanticIssuesError,
   serializeLoliSpecAsJson
-} from '@loli-feature-flags/loli-sdk-js'
+} from '@loli-feature-flags/loli-sdk'
 
 const { t } = useI18n()
 const workbench = useWorkbench()

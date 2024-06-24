@@ -2,7 +2,7 @@
 import type {
   BooleanArrayCondition,
   BooleanArrayConditionOperator
-} from '@loli-feature-flags/loli-sdk-js'
+} from '@loli-feature-flags/loli-sdk'
 import BooleanArrayConditionOperatorSelect from '@/components/conditions/inputs/BooleanArrayConditionOperatorSelect.vue'
 import QuantifierSelector from '@/components/conditions/inputs/QuantifierSelector.vue'
 import { computed } from 'vue'

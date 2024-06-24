@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import TrashIcon from '@/components/icons/TrashIcon.vue'
 import DocumentDuplicateIcon from '@/components/icons/DocumentDuplicateIcon.vue'
-import { type FeatureFlag } from '@loli-feature-flags/loli-sdk-js'
+import { type FeatureFlag } from '@loli-feature-flags/loli-sdk'
 import RuleListEntryValues from '@/views/featureFlags/editor/rules/RuleListEntryValues.vue'
 import ConditionSet from '@/components/conditions/ConditionSet.vue'
 import Button from '@/components/ui/Button.vue'

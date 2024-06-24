@@ -11,7 +11,7 @@ import {
   FeatureFlagNameRegex,
   type FeatureFlagType,
   FeatureFlagTypes
-} from '@loli-feature-flags/loli-sdk-js'
+} from '@loli-feature-flags/loli-sdk'
 import { i18n } from '@/i18n'
 import { useNavigation } from '@/stores/navigation/store'
 import { useWorkbench } from '@/stores/workbench/store'

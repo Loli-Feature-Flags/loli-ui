@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type ConditionSet } from '@loli-feature-flags/loli-sdk-js'
+import { type ConditionSet } from '@loli-feature-flags/loli-sdk'
 import VueDraggable from 'vuedraggable'
 import ConditionSetConditionListEntry from '@/components/conditions/ConditionSetConditionListEntry.vue'
 import type { IssuesCarryOn } from '@/utils/issues'

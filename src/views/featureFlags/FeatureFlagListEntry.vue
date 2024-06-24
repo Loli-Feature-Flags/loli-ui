@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { FeatureFlag } from '@loli-feature-flags/loli-sdk-js'
+import type { FeatureFlag } from '@loli-feature-flags/loli-sdk'
 import { i18nFeatureFlagDefaultValue, isFeatureFlagStale } from '@/utils/featureFlags'
 import ToggleIcon from '@/components/icons/ToggleIcon.vue'
 import FeatureFlagTypeBadge from '@/components/shared/FeatureFlagTypeBadge.vue'

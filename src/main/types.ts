@@ -1,4 +1,4 @@
-import type { LoliSpec } from '@loli-feature-flags/loli-sdk-js'
+import type { LoliSpec } from '@loli-feature-flags/loli-sdk'
 import type { NavigationState } from '@/stores/navigation/NavigationState'
 import type {
   HideableView,

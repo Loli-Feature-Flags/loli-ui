@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import FeatureFlagEditorSection from '@/views/featureFlags/editor/FeatureFlagEditorSection.vue'
-import type { FeatureFlag } from '@loli-feature-flags/loli-sdk-js'
+import type { FeatureFlag } from '@loli-feature-flags/loli-sdk'
 import BooleanValueSelect from '@/views/featureFlags/editor/values/BooleanValueSelect.vue'
 import NumberValueInput from '@/views/featureFlags/editor/values/NumberValueInput.vue'
 import StringValueInput from '@/views/featureFlags/editor/values/StringValueInput.vue'

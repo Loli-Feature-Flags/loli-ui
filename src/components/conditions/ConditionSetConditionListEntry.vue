@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type Condition, SemanticIssueType } from '@loli-feature-flags/loli-sdk-js'
+import { type Condition, SemanticIssueType } from '@loli-feature-flags/loli-sdk'
 import ConditionSetConditionRow from '@/components/conditions/types/ConditionSetConditionRow.vue'
 import PropertyConditionRow from '@/components/conditions/types/PropertyConditionRow.vue'
 import TrashIcon from '@/components/icons/TrashIcon.vue'

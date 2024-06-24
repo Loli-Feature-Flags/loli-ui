@@ -8,7 +8,7 @@ import { ref } from 'vue'
 import Label from '@/components/ui/Label.vue'
 import Input from '@/components/ui/Input.vue'
 import { useNavigation } from '@/stores/navigation/store'
-import { type Segment, SegmentNameRegex } from '@loli-feature-flags/loli-sdk-js'
+import { type Segment, SegmentNameRegex } from '@loli-feature-flags/loli-sdk'
 import Form from '@/components/ui/Form.vue'
 
 const workbench = useWorkbench()

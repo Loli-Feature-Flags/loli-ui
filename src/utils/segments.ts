@@ -1,5 +1,5 @@
 import { inject, provide, ref, type Ref } from 'vue'
-import type { Segment } from '@loli-feature-flags/loli-sdk-js'
+import type { Segment } from '@loli-feature-flags/loli-sdk'
 
 const rootSegmentIdKey = 'rootSegmentId'
 

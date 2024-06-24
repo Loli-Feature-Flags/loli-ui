@@ -3,7 +3,7 @@ import {
   type FeatureFlag,
   FeatureFlagNameRegex,
   SemanticIssueType
-} from '@loli-feature-flags/loli-sdk-js'
+} from '@loli-feature-flags/loli-sdk'
 import { ref, watch } from 'vue'
 import ToggleIcon from '@/components/icons/ToggleIcon.vue'
 import CheckIcon from '@/components/icons/CheckIcon.vue'

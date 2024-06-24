@@ -3,7 +3,7 @@ import Select from '@/components/ui/Select.vue'
 import {
   type DateTimeConditionTimezoneOffsetMode,
   DateTimeConditionTimezoneOffsetModes
-} from '@loli-feature-flags/loli-sdk-js'
+} from '@loli-feature-flags/loli-sdk'
 
 const timezoneOffsetModeModel = defineModel<DateTimeConditionTimezoneOffsetMode>({ required: true })
 </script>

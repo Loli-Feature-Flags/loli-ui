@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import FeatureFlagEditorSection from '@/views/featureFlags/editor/FeatureFlagEditorSection.vue'
-import type { FeatureFlag } from '@loli-feature-flags/loli-sdk-js'
+import type { FeatureFlag } from '@loli-feature-flags/loli-sdk'
 import { toRaw } from 'vue'
 import Button from '@/components/ui/Button.vue'
 import PlusIcon from '@/components/icons/PlusIcon.vue'

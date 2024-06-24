@@ -3,7 +3,7 @@ import {
   type DateTimeCondition,
   dateTimeConditionOperandToDate,
   dateToDateTimeConditionOperand
-} from '@loli-feature-flags/loli-sdk-js'
+} from '@loli-feature-flags/loli-sdk'
 import CalendarDaysIcon from '@/components/icons/CalendarDaysIcon.vue'
 import DateTimeConditionOperatorSelect from '@/components/conditions/inputs/DateTimeConditionOperatorSelect.vue'
 import DateTimeInput from '@/components/ui/DateTimeInput.vue'

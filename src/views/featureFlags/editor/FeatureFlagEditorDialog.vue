@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Dialog from '@/components/ui/Dialog.vue'
-import type { FeatureFlag } from '@loli-feature-flags/loli-sdk-js'
+import type { FeatureFlag } from '@loli-feature-flags/loli-sdk'
 import FeatureFlagEditorDialogTitle from '@/views/featureFlags/editor/FeatureFlagEditorDialogTitle.vue'
 import DescriptionSection from '@/views/featureFlags/editor/sections/DescriptionSection.vue'
 import DefaultValueSection from '@/views/featureFlags/editor/sections/DefaultValueSection.vue'

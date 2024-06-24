@@ -1,5 +1,5 @@
-import type { SemanticIssue, SemanticValidation, Path } from '@loli-feature-flags/loli-sdk-js'
-import { filterIssuesByPartialPath, SemanticIssueType } from '@loli-feature-flags/loli-sdk-js'
+import type { SemanticIssue, SemanticValidation, Path } from '@loli-feature-flags/loli-sdk'
+import { filterIssuesByPartialPath, SemanticIssueType } from '@loli-feature-flags/loli-sdk'
 
 export class IssuesCarryOn {
   private readonly allIssueTypes: Set<SemanticIssueType>

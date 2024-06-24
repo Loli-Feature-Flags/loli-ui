@@ -1,11 +1,11 @@
 import { defineStore } from 'pinia'
-import type { LoliSpec } from '@loli-feature-flags/loli-sdk-js'
+import type { LoliSpec } from '@loli-feature-flags/loli-sdk'
 import {
   getAllIdsUsedInSpec,
   LoliSpecSchema,
   SemanticValidation,
   validateLoliSpecSemantically
-} from '@loli-feature-flags/loli-sdk-js'
+} from '@loli-feature-flags/loli-sdk'
 import { computed, ref, watch, watchEffect } from 'vue'
 import { init } from '@paralleldrive/cuid2'
 import { useConfig } from '@/stores/config/store'

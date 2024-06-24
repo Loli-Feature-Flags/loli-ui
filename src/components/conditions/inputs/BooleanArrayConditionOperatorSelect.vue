@@ -2,7 +2,7 @@
 import {
   type BooleanArrayConditionOperator,
   BooleanArrayConditionOperators
-} from '@loli-feature-flags/loli-sdk-js'
+} from '@loli-feature-flags/loli-sdk'
 import Select from '@/components/ui/Select.vue'
 
 const operatorModel = defineModel<BooleanArrayConditionOperator>()

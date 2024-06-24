@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Dialog from '@/components/ui/Dialog.vue'
-import type { Segment } from '@loli-feature-flags/loli-sdk-js'
+import type { Segment } from '@loli-feature-flags/loli-sdk'
 import EditSegmentDialogTitle from '@/views/segments/EditSegmentDialogTitle.vue'
 import ConditionSet from '@/components/conditions/ConditionSet.vue'
 import { provideRootSegment } from '@/utils/segments'

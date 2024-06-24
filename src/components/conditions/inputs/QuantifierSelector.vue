@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type Quantifier, Quantifiers } from '@loli-feature-flags/loli-sdk-js'
+import { type Quantifier, Quantifiers } from '@loli-feature-flags/loli-sdk'
 import Select from '@/components/ui/Select.vue'
 
 const quantifierModel = defineModel<Quantifier>({ required: true })

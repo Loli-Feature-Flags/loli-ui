@@ -7,7 +7,7 @@ import type {
   PropertyCondition,
   StringArrayCondition,
   StringCondition
-} from '@loli-feature-flags/loli-sdk-js'
+} from '@loli-feature-flags/loli-sdk'
 
 export function createDefaultConditionForProperty(property: Property): PropertyCondition {
   const propertyId = property.id

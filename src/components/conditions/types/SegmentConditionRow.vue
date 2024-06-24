@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { SegmentCondition } from '@loli-feature-flags/loli-sdk-js'
+import type { SegmentCondition } from '@loli-feature-flags/loli-sdk'
 import RectangleGroupIcon from '@/components/icons/RectangleGroupIcon.vue'
 import SegmentSelect from '@/components/conditions/inputs/SegmentSelect.vue'
 import SegmentConditionOperatorSelect from '@/components/conditions/inputs/SegmentConditionOperatorSelect.vue'

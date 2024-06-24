@@ -2,7 +2,7 @@
 import type {
   StringArrayCondition,
   StringArrayConditionOperator
-} from '@loli-feature-flags/loli-sdk-js'
+} from '@loli-feature-flags/loli-sdk'
 import StringArrayConditionOperatorSelect from '@/components/conditions/inputs/StringArrayConditionOperatorSelect.vue'
 import QuantifierSelector from '@/components/conditions/inputs/QuantifierSelector.vue'
 import StringOperands from '@/components/conditions/inputs/StringOperands.vue'

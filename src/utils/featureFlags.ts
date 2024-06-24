@@ -1,4 +1,4 @@
-import type { FeatureFlag } from '@loli-feature-flags/loli-sdk-js'
+import type { FeatureFlag } from '@loli-feature-flags/loli-sdk'
 import { i18n } from '@/i18n'
 
 export function i18nFeatureFlagDefaultValue(featureFlag: FeatureFlag): string {

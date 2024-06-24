@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { BooleanCondition } from '@loli-feature-flags/loli-sdk-js'
+import type { BooleanCondition } from '@loli-feature-flags/loli-sdk'
 import BooleanConditionOperatorSelect from '@/components/conditions/inputs/BooleanConditionOperatorSelect.vue'
 
 const conditionModel = defineModel<BooleanCondition>({ required: true })

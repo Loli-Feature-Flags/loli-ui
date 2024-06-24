@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { Property } from '@loli-feature-flags/loli-sdk-js'
-import { countPropertyReferences, isPropertyReferenced } from '@loli-feature-flags/loli-sdk-js'
+import type { Property } from '@loli-feature-flags/loli-sdk'
+import { countPropertyReferences, isPropertyReferenced } from '@loli-feature-flags/loli-sdk'
 import FingerprintIcon from '@/components/icons/FingerprintIcon.vue'
 import StalePropertyIndicator from '@/components/shared/indicators/StalePropertyIndicator.vue'
 import { useWorkbench } from '@/stores/workbench/store'

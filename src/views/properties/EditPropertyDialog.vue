@@ -12,7 +12,7 @@ import {
   type PropertyType,
   PropertyTypes,
   SemanticIssueType
-} from '@loli-feature-flags/loli-sdk-js'
+} from '@loli-feature-flags/loli-sdk'
 import { i18n } from '@/i18n'
 import XMarkIcon from '@/components/icons/XMarkIcon.vue'
 import SaveIcon from '@/components/icons/SaveIcon.vue'

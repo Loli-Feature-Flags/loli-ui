@@ -2,7 +2,7 @@
 import type {
   NumberArrayCondition,
   NumberArrayConditionOperator
-} from '@loli-feature-flags/loli-sdk-js'
+} from '@loli-feature-flags/loli-sdk'
 import NumberArrayConditionOperatorSelect from '@/components/conditions/inputs/NumberArrayConditionOperatorSelect.vue'
 import QuantifierSelector from '@/components/conditions/inputs/QuantifierSelector.vue'
 import NumberOperands from '@/components/conditions/inputs/NumberOperands.vue'

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NumberCondition, NumberConditionOperator } from '@loli-feature-flags/loli-sdk-js'
+import type { NumberCondition, NumberConditionOperator } from '@loli-feature-flags/loli-sdk'
 import NumberConditionOperatorSelect from '@/components/conditions/inputs/NumberConditionOperatorSelect.vue'
 import QuantifierSelector from '@/components/conditions/inputs/QuantifierSelector.vue'
 import NumberOperands from '@/components/conditions/inputs/NumberOperands.vue'

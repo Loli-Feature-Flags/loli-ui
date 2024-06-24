@@ -1,4 +1,4 @@
-// import type { LoliSpec } from '@loli-feature-flags/loli-sdk-js'
+// import type { LoliSpec } from '@loli-feature-flags/loli-sdk'
 //
 // type MinimizeMap<T> = {
 //   [key in keyof T]?: T[key] extends Array<unknown>

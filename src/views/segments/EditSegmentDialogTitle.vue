@@ -6,7 +6,7 @@ import {
   type Segment,
   SegmentNameRegex,
   SemanticIssueType
-} from '@loli-feature-flags/loli-sdk-js'
+} from '@loli-feature-flags/loli-sdk'
 import CheckIcon from '@/components/icons/CheckIcon.vue'
 import ConfirmDeleteDialog from '@/components/shared/ConfirmDeleteDialog.vue'
 import TrashIcon from '@/components/icons/TrashIcon.vue'

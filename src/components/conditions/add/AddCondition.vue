@@ -5,12 +5,12 @@ import type {
   Property,
   Segment,
   SegmentCondition
-} from '@loli-feature-flags/loli-sdk-js'
+} from '@loli-feature-flags/loli-sdk'
 import {
   type Condition,
   type DateTimeCondition,
   dateToDateTimeConditionOperand
-} from '@loli-feature-flags/loli-sdk-js'
+} from '@loli-feature-flags/loli-sdk'
 import { computed, ref } from 'vue'
 import { useWorkbench } from '@/stores/workbench/store'
 import PlusIcon from '@/components/icons/PlusIcon.vue'

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useWorkbench } from '@/stores/workbench/store'
-import type { Segment } from '@loli-feature-flags/loli-sdk-js'
-import { countSegmentReferences, isSegmentReferenced } from '@loli-feature-flags/loli-sdk-js'
+import type { Segment } from '@loli-feature-flags/loli-sdk'
+import { countSegmentReferences, isSegmentReferenced } from '@loli-feature-flags/loli-sdk'
 import RectangleGroupIcon from '@/components/icons/RectangleGroupIcon.vue'
 import StaleSegmentIndiciator from '@/components/shared/indicators/StaleSegmentIndiciator.vue'
 import EmptySegmentIndicator from '@/components/shared/indicators/EmptySegmentIndicator.vue'
