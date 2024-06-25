@@ -27,7 +27,7 @@ const loliUiElementRef = useLoliUiElementRef()
         :align="align"
         :side="side"
         :side-offset="offset ?? 4"
-        :style="`z-index: ${config.floatingZIndex}`"
+        :style="config.getFloatingZIndexStyle()"
       >
         <slot />
         <PopoverArrow class="fill-gray-300" :width="8" :height="4" />

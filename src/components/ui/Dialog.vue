@@ -40,7 +40,7 @@ const loliUiRef = useLoliUiElementRef()
       <Transition name="fade">
         <DialogOverlay
           class="bg-gray-700/50 w-full h-full fixed top-0 left-0"
-          :style="`z-index: ${config.floatingZIndex};`"
+          :style="config.getFloatingZIndexStyle()"
         />
       </Transition>
 
@@ -66,7 +66,7 @@ const loliUiRef = useLoliUiElementRef()
               'flex flex-col': contentOnlyScroll
             }
           ]"
-          :style="`z-index: ${config.floatingZIndex};`"
+          :style="config.getFloatingZIndexStyle()"
           v-bind="
             !description || hideDescription
               ? {

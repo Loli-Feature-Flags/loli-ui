@@ -6,7 +6,7 @@ import {
   SemanticValidation,
   validateLoliSpecSemantically
 } from '@loli-feature-flags/loli-sdk'
-import { computed, ref, watch, watchEffect } from 'vue'
+import { computed, ref, toRaw, watch, watchEffect } from 'vue'
 import { init } from '@paralleldrive/cuid2'
 import { useConfig } from '@/stores/config/store'
 
@@ -54,7 +54,7 @@ export const useWorkbench = defineStore('workbench', () => {
       }
 
       setRawSpec(spec)
-      config.informSpecChangeListeners(spec)
+      config.informSpecChangeListeners(toRaw(spec))
     }
   }
 
@@ -93,7 +93,7 @@ export const useWorkbench = defineStore('workbench', () => {
         rawSpec.value = newSpecStringified
 
         if (schemaValidation.value.success && semanticValidation.value.isValid()) {
-          config.informSpecChangeListeners(newValue)
+          config.informSpecChangeListeners(toRaw(newValue))
         }
       }
     },

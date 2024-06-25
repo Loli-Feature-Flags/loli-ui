@@ -63,7 +63,7 @@ const arrowVariantClasses: { [key in HelpTooltipVariant]: string } = {
             'rounded-md text-xs px-2 py-1 whitespace-pre-line',
             variantClasses[variant ?? 'normal']
           ]"
-          :style="`z-index: ${config.floatingZIndex}`"
+          :style="config.getFloatingZIndexStyle()"
           as="div"
         >
           <span><slot /></span>

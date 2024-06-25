@@ -98,6 +98,10 @@ export const useConfig = defineStore('config', () => {
     floatingZIndex.value = zIndex
   }
 
+  function getFloatingZIndexStyle() {
+    return `z-index: ${floatingZIndex.value};`
+  }
+
   return {
     registerSpecChangeListener,
     unregisterSpecChangeListener,
@@ -112,6 +116,7 @@ export const useConfig = defineStore('config', () => {
     isViewHidden,
     isViewVisible,
     floatingZIndex,
-    setDialogZIndex: setFloatingZIndex
+    setFloatingZIndex,
+    getFloatingZIndexStyle
   }
 })

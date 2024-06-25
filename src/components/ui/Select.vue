@@ -17,9 +17,12 @@ import useLoliUiElementRef from '@/hooks/useLoliUiElementRef'
 import CheckIcon from '@/components/icons/CheckIcon.vue'
 import ChevronUpIcon from '@/components/icons/ChevronUpIcon.vue'
 import ChevronDownIcon from '@/components/icons/ChevronDownIcon.vue'
+import { useConfig } from '@/stores/config/store'
 
 export type SelectOption<VALUE extends string = string> = { value: VALUE; label?: string }
 export type SelectSize = 'small' | 'normal'
+
+const config = useConfig()
 
 defineProps<{
   options: SelectOption[]
@@ -79,6 +82,7 @@ const loliUiRef = useLoliUiElementRef()
           :side="side ?? 'bottom'"
           :side-offset="offset ?? 8"
           class="bg-white min-w-[15em] p-2 shadow-2xl border border-gray-300 rounded-md z-100 max-h-[17em] relative overflow-hidden"
+          :style="config.getFloatingZIndexStyle()"
         >
           <SelectScrollUpButton
             class="flex flex-row justify-center absolute top-0 left-0 w-full border-b border-gray-300 bg-white py-0.5 z-10"
