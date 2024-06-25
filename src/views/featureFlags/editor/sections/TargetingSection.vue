@@ -59,8 +59,10 @@ function deleteRule(index: number) {
 
 function duplicateRule(index: number) {
   if (featureFlag.value) {
-    // @ts-ignore
-    featureFlag.value.rules.push(structuredClone(toRaw(featureFlag.value).rules[index]))
+    featureFlag.value.targeting.rules.push(
+      // @ts-ignore
+      structuredClone(toRaw(featureFlag.value).targeting.rules[index])
+    )
   }
 }
 </script>

@@ -29544,7 +29544,10 @@ const sA = /* @__PURE__ */ ct(tA, [["render", aA]]), iA = /* @__PURE__ */ B({
       t.value.targeting.rules.splice(a, 1);
     }
     function o(a) {
-      t.value && t.value.rules.push(structuredClone(Qe(t.value).rules[a]));
+      t.value && t.value.targeting.rules.push(
+        // @ts-ignore
+        structuredClone(Qe(t.value).targeting.rules[a])
+      );
     }
     return (a, s) => (S(), R($p, {
       title: a.$t("views.featureFlags.editor.targeting.title")
