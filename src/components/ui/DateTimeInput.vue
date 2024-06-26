@@ -37,7 +37,7 @@ const sizeClasses: { [key in DateTimeInputSize]: string } = {
     :class="[
       'select-none flex items-center gap-0.5',
       'transition relative',
-      'border border-gray-300 focus-ring text-gray-700',
+      'bg-white border border-gray-300 focus-ring text-gray-700',
       { 'w-full': !fit },
       sizeClasses[size ?? 'normal']
     ]"

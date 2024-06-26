@@ -76,7 +76,7 @@ function resetNumberValueOnBlurIfEmpty() {
         v-model="autoConvertingModel"
         :class="[
           'transition relative',
-          'border border-gray-300 focus-ring text-gray-700',
+          'bg-white border border-gray-300 focus-ring text-gray-700',
           'placeholder:text-gray-400 placeholder:font-extralight',
           { 'w-full': !fit },
           sizeClasses[size ?? 'normal']

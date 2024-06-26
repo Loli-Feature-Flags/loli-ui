@@ -99,7 +99,7 @@ function save() {
     <div v-if="currentErrorTitle" class="text-red-600 mb-4">{{ currentErrorTitle }}</div>
 
     <textarea
-      class="p-4 rounded-md border border-gray-300 w-full min-h-[35em] font-mono text-xs focus-ring transition resize-y"
+      class="p-4 rounded-md bg-white border border-gray-300 w-full min-h-[35em] font-mono text-xs focus-ring transition resize-y"
       v-model="editorJson"
       spellcheck="false"
     />

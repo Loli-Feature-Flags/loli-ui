@@ -48,7 +48,7 @@ const inputSizeClasses: { [key in TagsInputSize]: string } = {
     v-model="valuesModel"
     :class="[
       'flex flex-row flex-wrap gap-2 items-center',
-      'border border-gray-300 focus-ring',
+      'bg-white border border-gray-300 focus-ring',
       rootSizeClasses[size ?? 'normal'],
       { 'w-full': !fit }
     ]"
