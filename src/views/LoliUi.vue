@@ -8,6 +8,7 @@ import InitializeSpecView from '@/views/initializeSpec/InitializeSpecView.vue'
 import { useConfig } from '@/stores/config/store'
 import NoViewAccessibleView from '@/views/noViewAccessible/NoViewAccessibleView.vue'
 import type { NavigationState } from '@/stores/navigation/NavigationState'
+import AnimateChangingContentHeight from '@/components/ui/AnimateChangingContentHeight.vue'
 
 const config = useConfig()
 const workbench = useWorkbench()
@@ -37,29 +38,33 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div class="py-4 px-8 rounded-md loli-ui text-gray-900 bg-white relative" ref="loliUiRef">
-    <Transition name="view-fade" :duration="300">
-      <div v-if="!workbench.isRawSpecPresent">
-        <InitializeSpecView v-if="config.isViewVisible('initializeSpec')" />
+  <div class="loli-ui bg-white relative text-gray-900 rounded-md" ref="loliUiRef">
+    <AnimateChangingContentHeight>
+      <div class="py-4 px-8">
+        <Transition name="view-fade" :duration="300">
+          <div v-if="!workbench.isRawSpecPresent">
+            <InitializeSpecView v-if="config.isViewVisible('initializeSpec')" />
 
-        <NoViewAccessibleView v-else />
+            <NoViewAccessibleView v-else />
+          </div>
+
+          <div v-else>
+            <template v-if="someEditingViewVisible">
+              <LoliNavigation />
+
+              <main class="pb-4 pt-8">
+                <div class="relative">
+                  <Transition name="view-fade" :duration="300">
+                    <component :is="LoliViewMap[navigation.state.view]" />
+                  </Transition>
+                </div>
+              </main>
+            </template>
+
+            <NoViewAccessibleView v-else />
+          </div>
+        </Transition>
       </div>
-
-      <div v-else>
-        <template v-if="someEditingViewVisible">
-          <LoliNavigation />
-
-          <main class="pb-4 pt-8">
-            <div class="relative">
-              <Transition name="view-fade" :duration="300">
-                <component :is="LoliViewMap[navigation.state.view]" />
-              </Transition>
-            </div>
-          </main>
-        </template>
-
-        <NoViewAccessibleView v-else />
-      </div>
-    </Transition>
+    </AnimateChangingContentHeight>
   </div>
 </template>
