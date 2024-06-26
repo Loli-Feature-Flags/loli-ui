@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { useNavigation } from '@/stores/navigation/store'
-import { useWorkbench } from '@/stores/workbench/store'
-import FeatureFlagListEntry from '@/views/featureFlags/FeatureFlagListEntry.vue'
 import { computed, ref } from 'vue'
-import Input from '@/components/ui/Input.vue'
-import Button from '@/components/ui/Button.vue'
-import XMarkIcon from '@/components/icons/XMarkIcon.vue'
-import { IssuesCarryOn } from '@/utils/issues'
+import { useNavigation } from '../../stores/navigation/store'
+import { useWorkbench } from '../../stores/workbench/store'
+import Input from '../../components/ui/Input.vue'
+import Button from '../../components/ui/Button.vue'
+import XMarkIcon from '../../components/icons/XMarkIcon.vue'
+import { IssuesCarryOn } from '../../utils/issues'
+import FeatureFlagListEntry from './FeatureFlagListEntry.vue'
 
 const navigation = useNavigation()
 const workbench = useWorkbench()

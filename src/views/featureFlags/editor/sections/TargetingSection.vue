@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import FeatureFlagEditorSection from '@/views/featureFlags/editor/FeatureFlagEditorSection.vue'
 import type { FeatureFlag } from '@loli-feature-flags/loli-sdk'
 import { toRaw } from 'vue'
-import Button from '@/components/ui/Button.vue'
-import PlusIcon from '@/components/icons/PlusIcon.vue'
-import RuleListEntry from '@/views/featureFlags/editor/rules/RuleListEntry.vue'
 import VueDraggable from 'vuedraggable'
-import Switch from '@/components/ui/Switch.vue'
-import type { IssuesCarryOn } from '@/utils/issues'
-import { DRAG_HANDLE_CLASS } from '@/constants'
+import type { IssuesCarryOn } from '../../../../utils/issues'
+import RuleListEntry from '../rules/RuleListEntry.vue'
+import PlusIcon from '../../../../components/icons/PlusIcon.vue'
+import Switch from '../../../../components/ui/Switch.vue'
+import FeatureFlagEditorSection from '../FeatureFlagEditorSection.vue'
+import Button from '../../../../components/ui/Button.vue'
+import { DRAG_HANDLE_CLASS } from '../../../../constants'
 
 const featureFlag = defineModel<FeatureFlag>({ required: true })
 defineProps<{ issuesCarryOn: IssuesCarryOn }>()

@@ -3,7 +3,7 @@ import {
   type NumberConditionOperator,
   NumberConditionOperators
 } from '@loli-feature-flags/loli-sdk'
-import Select from '@/components/ui/Select.vue'
+import Select from '../../ui/Select.vue'
 
 const operatorModel = defineModel<NumberConditionOperator>()
 </script>

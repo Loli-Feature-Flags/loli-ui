@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia'
 import { computed } from 'vue'
 import type { FeatureFlag } from '@loli-feature-flags/loli-sdk'
-import { useWorkbench } from '@/stores/workbench/store'
-import { useNavigation } from '@/stores/navigation/store'
+import { useNavigation } from './navigation/store'
+import { useWorkbench } from './workbench/store'
 
 export const useFeatureFlagEditor = defineStore('featureFlagEditor', () => {
   const workbench = useWorkbench()

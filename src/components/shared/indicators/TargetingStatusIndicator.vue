@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import HelpTooltip from '@/components/ui/HelpTooltip.vue'
-import SignalIcon from '@/components/icons/SignalIcon.vue'
-import SignalSlashIcon from '@/components/icons/SignalSlashIcon.vue'
+import SignalSlashIcon from '../../icons/SignalSlashIcon.vue'
+import SignalIcon from '../../icons/SignalIcon.vue'
+import HelpTooltip from '../../ui/HelpTooltip.vue'
 
 defineProps<{ active: boolean }>()
 const sharedIconClasses = 'icon-no-default size-5 cursor-help'

@@ -3,10 +3,10 @@ import type {
   StringArrayCondition,
   StringArrayConditionOperator
 } from '@loli-feature-flags/loli-sdk'
-import StringArrayConditionOperatorSelect from '@/components/conditions/inputs/StringArrayConditionOperatorSelect.vue'
-import QuantifierSelector from '@/components/conditions/inputs/QuantifierSelector.vue'
-import StringOperands from '@/components/conditions/inputs/StringOperands.vue'
 import { computed } from 'vue'
+import StringOperands from '../../inputs/StringOperands.vue'
+import QuantifierSelector from '../../inputs/QuantifierSelector.vue'
+import StringArrayConditionOperatorSelect from '../../inputs/StringArrayConditionOperatorSelect.vue'
 
 const conditionModel = defineModel<StringArrayCondition>({ required: true })
 

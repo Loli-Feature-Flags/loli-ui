@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import type { Property } from '@loli-feature-flags/loli-sdk'
 import { countPropertyReferences, isPropertyReferenced } from '@loli-feature-flags/loli-sdk'
-import FingerprintIcon from '@/components/icons/FingerprintIcon.vue'
-import StalePropertyIndicator from '@/components/shared/indicators/StalePropertyIndicator.vue'
-import { useWorkbench } from '@/stores/workbench/store'
-import PropertyRolloutDiscriminatorIndicator from '@/components/shared/indicators/PropertyRolloutDiscriminatorIndicator.vue'
-import ReferencesIndicator from '@/components/shared/indicators/ReferencesIndicator.vue'
-import type { IssuesCarryOn } from '@/utils/issues'
-import ListEntryCard from '@/components/shared/ListEntryCard.vue'
+import { useWorkbench } from '../../stores/workbench/store'
+import type { IssuesCarryOn } from '../../utils/issues'
+import ReferencesIndicator from '../../components/shared/indicators/ReferencesIndicator.vue'
+import PropertyRolloutDiscriminatorIndicator from '../../components/shared/indicators/PropertyRolloutDiscriminatorIndicator.vue'
+import StalePropertyIndicator from '../../components/shared/indicators/StalePropertyIndicator.vue'
+import FingerprintIcon from '../../components/icons/FingerprintIcon.vue'
+import ListEntryCard from '../../components/shared/ListEntryCard.vue'
 
 const workbench = useWorkbench()
 const property = defineModel<Property>({ required: true })

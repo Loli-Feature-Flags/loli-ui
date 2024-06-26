@@ -1,13 +1,13 @@
-import { useNavigation } from '@/stores/navigation/store'
-import { useWorkbench } from '@/stores/workbench/store'
-import { initializeFonts } from '@/main/fonts'
-import { initializeApp } from '@/main/app'
-import type { LoliUiMountOptions, LoliUiMountResult } from '@/main/types'
-import { initializePlugins } from '@/main/plugins'
-import { initializeDirectives } from '@/main/directives'
-import { initializeStores } from '@/main/stores'
-import { initializeStyles } from '@/main/styles'
-import { mountApp } from '@/main/mount'
+import type { LoliUiMountOptions, LoliUiMountResult } from './main/types'
+import { initializeFonts } from './main/fonts'
+import { initializeApp } from './main/app'
+import { initializePlugins } from './main/plugins'
+import { initializeDirectives } from './main/directives'
+import { initializeStores } from './main/stores'
+import { initializeStyles } from './main/styles'
+import { mountApp } from './main/mount'
+import { useWorkbench } from './stores/workbench/store'
+import { useNavigation } from './stores/navigation/store'
 
 /**
  * Initializes and mounts an instance of Loli UI

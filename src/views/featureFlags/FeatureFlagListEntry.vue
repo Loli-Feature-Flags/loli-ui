@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import type { FeatureFlag } from '@loli-feature-flags/loli-sdk'
-import { i18nFeatureFlagDefaultValue, isFeatureFlagStale } from '@/utils/featureFlags'
-import ToggleIcon from '@/components/icons/ToggleIcon.vue'
-import FeatureFlagTypeBadge from '@/components/shared/FeatureFlagTypeBadge.vue'
-import StaleFeatureFlagIndicator from '@/components/shared/indicators/StaleFeatureFlagIndicator.vue'
-import TargetingStatusIndicator from '@/components/shared/indicators/TargetingStatusIndicator.vue'
-import type { IssuesCarryOn } from '@/utils/issues'
-import ListEntryCard from '@/components/shared/ListEntryCard.vue'
+import FeatureFlagTypeBadge from '../../components/shared/FeatureFlagTypeBadge.vue'
+import TargetingStatusIndicator from '../../components/shared/indicators/TargetingStatusIndicator.vue'
+import StaleFeatureFlagIndicator from '../../components/shared/indicators/StaleFeatureFlagIndicator.vue'
+import ToggleIcon from '../../components/icons/ToggleIcon.vue'
+import ListEntryCard from '../../components/shared/ListEntryCard.vue'
+import type { IssuesCarryOn } from '../../utils/issues'
+import { i18nFeatureFlagDefaultValue, isFeatureFlagStale } from '../../utils/featureFlags'
 
 defineProps<{
   featureFlag: FeatureFlag

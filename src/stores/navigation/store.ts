@@ -1,9 +1,8 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
-import type { NavigationState } from '@/stores/navigation/NavigationState'
-import { NavigationStateSchema } from '@/stores/navigation/NavigationState'
-import type { NavigationStateChangeSource, NavigationStateChangeType } from '@/stores/config/types'
-import { useConfig } from '@/stores/config/store'
+import { type NavigationState, NavigationStateSchema } from './NavigationState'
+import { useConfig } from '../config/store'
+import type { NavigationStateChangeSource, NavigationStateChangeType } from '../config/types'
 
 const DEFAULT_NAVIGATION_STATE: NavigationState = {
   view: 'featureFlags'

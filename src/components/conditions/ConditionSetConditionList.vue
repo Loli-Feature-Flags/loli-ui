@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { type ConditionSet } from '@loli-feature-flags/loli-sdk'
 import VueDraggable from 'vuedraggable'
-import ConditionSetConditionListEntry from '@/components/conditions/ConditionSetConditionListEntry.vue'
-import type { IssuesCarryOn } from '@/utils/issues'
-import { DRAG_HANDLE_CLASS } from '@/constants'
+import type { IssuesCarryOn } from '../../utils/issues'
+import { DRAG_HANDLE_CLASS } from '../../constants'
+import ConditionSetConditionListEntry from './ConditionSetConditionListEntry.vue'
 
 const conditionSetModel = defineModel<ConditionSet>({ required: true })
 defineProps<{ issuesCarryOn: IssuesCarryOn }>()

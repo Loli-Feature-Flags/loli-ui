@@ -1,9 +1,4 @@
 <script setup lang="ts">
-import Label from '@/components/ui/Label.vue'
-import Select, { type SelectOption } from '@/components/ui/Select.vue'
-import Dialog from '@/components/ui/Dialog.vue'
-import Input from '@/components/ui/Input.vue'
-import Button from '@/components/ui/Button.vue'
 import { computed, ref, watch } from 'vue'
 import {
   countPropertyReferences,
@@ -13,22 +8,27 @@ import {
   PropertyTypes,
   SemanticIssueType
 } from '@loli-feature-flags/loli-sdk'
-import { i18n } from '@/i18n'
-import XMarkIcon from '@/components/icons/XMarkIcon.vue'
-import SaveIcon from '@/components/icons/SaveIcon.vue'
-import DefaultDialogTitle from '@/components/ui/DefaultDialogTitle.vue'
-import FingerprintIcon from '@/components/icons/FingerprintIcon.vue'
-import ConfirmDeleteDialog from '@/components/shared/ConfirmDeleteDialog.vue'
-import TrashIcon from '@/components/icons/TrashIcon.vue'
-import { useWorkbench } from '@/stores/workbench/store'
-import StalePropertyIndicator from '@/components/shared/indicators/StalePropertyIndicator.vue'
-import Switch from '@/components/ui/Switch.vue'
-import ReferencesIndicator from '@/components/shared/indicators/ReferencesIndicator.vue'
-import type { IssuesCarryOn } from '@/utils/issues'
-import CyclicDependencyIndicator from '@/components/shared/validation/CyclicDependencyIndicator.vue'
-import DuplicatedIdIndicator from '@/components/shared/validation/DuplicatedIdIndicator.vue'
-import DuplicatedPropertyPathIndicator from '@/components/shared/validation/DuplicatedPropertyPathIndicator.vue'
-import Form from '@/components/ui/Form.vue'
+import { useWorkbench } from '../../stores/workbench/store'
+import type { IssuesCarryOn } from '../../utils/issues'
+import Select, { type SelectOption } from '../../components/ui/Select.vue'
+import { i18n } from '../../i18n/index'
+import SaveIcon from '../../components/icons/SaveIcon.vue'
+import XMarkIcon from '../../components/icons/XMarkIcon.vue'
+import Switch from '../../components/ui/Switch.vue'
+import Label from '../../components/ui/Label.vue'
+import DuplicatedPropertyPathIndicator from '../../components/shared/validation/DuplicatedPropertyPathIndicator.vue'
+import TrashIcon from '../../components/icons/TrashIcon.vue'
+import ConfirmDeleteDialog from '../../components/shared/ConfirmDeleteDialog.vue'
+import ReferencesIndicator from '../../components/shared/indicators/ReferencesIndicator.vue'
+import StalePropertyIndicator from '../../components/shared/indicators/StalePropertyIndicator.vue'
+import CyclicDependencyIndicator from '../../components/shared/validation/CyclicDependencyIndicator.vue'
+import DuplicatedIdIndicator from '../../components/shared/validation/DuplicatedIdIndicator.vue'
+import FingerprintIcon from '../../components/icons/FingerprintIcon.vue'
+import DefaultDialogTitle from '../../components/ui/DefaultDialogTitle.vue'
+import Button from '../../components/ui/Button.vue'
+import Form from '../../components/ui/Form.vue'
+import Input from '../../components/ui/Input.vue'
+import Dialog from '../../components/ui/Dialog.vue'
 
 const workbench = useWorkbench()
 

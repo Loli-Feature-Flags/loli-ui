@@ -7,9 +7,9 @@ import {
   TooltipRoot,
   TooltipTrigger
 } from 'radix-vue'
-import useLoliUiElementRef from '@/hooks/useLoliUiElementRef'
 import { ref } from 'vue'
-import { useConfig } from '@/stores/config/store'
+import { useConfig } from '../../stores/config/store'
+import useLoliUiElementRef from '../../hooks/useLoliUiElementRef'
 
 const config = useConfig()
 

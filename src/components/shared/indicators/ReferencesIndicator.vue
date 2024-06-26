@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import HelpTooltip from '@/components/ui/HelpTooltip.vue'
+import HelpTooltip from '../../ui/HelpTooltip.vue'
 
 defineProps<{
   references: {

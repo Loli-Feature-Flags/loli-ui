@@ -4,11 +4,11 @@ import {
   dateTimeConditionOperandToDate,
   dateToDateTimeConditionOperand
 } from '@loli-feature-flags/loli-sdk'
-import CalendarDaysIcon from '@/components/icons/CalendarDaysIcon.vue'
-import DateTimeConditionOperatorSelect from '@/components/conditions/inputs/DateTimeConditionOperatorSelect.vue'
-import DateTimeInput from '@/components/ui/DateTimeInput.vue'
 import { computed } from 'vue'
-import DateTimeConditionTimezoneOffsetModeSelect from '@/components/conditions/inputs/DateTimeConditionTimezoneOffsetModeSelect.vue'
+import CalendarDaysIcon from '../../icons/CalendarDaysIcon.vue'
+import DateTimeConditionOperatorSelect from '../inputs/DateTimeConditionOperatorSelect.vue'
+import DateTimeInput from '../../ui/DateTimeInput.vue'
+import DateTimeConditionTimezoneOffsetModeSelect from '../inputs/DateTimeConditionTimezoneOffsetModeSelect.vue'
 
 const dateTimeCondition = defineModel<DateTimeCondition>({ required: true })
 

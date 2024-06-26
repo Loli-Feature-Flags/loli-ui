@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import LoliLogo from '@/components/LoliLogo.vue'
-import LoliNavigationButton from '@/components/LoliNavigationButton.vue'
-import { useNavigation } from '@/stores/navigation/store'
 import { toRefs, watchEffect } from 'vue'
-import ToggleIcon from '@/components/icons/ToggleIcon.vue'
-import FingerprintIcon from '@/components/icons/FingerprintIcon.vue'
-import RectangleGroupIcon from '@/components/icons/RectangleGroupIcon.vue'
-import CodeBracketIcon from '@/components/icons/CodeBracketIcon.vue'
-import { useWorkbench } from '@/stores/workbench/store'
-import { useConfig } from '@/stores/config/store'
+import { useConfig } from '../stores/config/store'
+import { useNavigation } from '../stores/navigation/store'
+import { useWorkbench } from '../stores/workbench/store'
+import LoliNavigationButton from './LoliNavigationButton.vue'
+import CodeBracketIcon from './icons/CodeBracketIcon.vue'
+import FingerprintIcon from './icons/FingerprintIcon.vue'
+import RectangleGroupIcon from './icons/RectangleGroupIcon.vue'
+import ToggleIcon from './icons/ToggleIcon.vue'
+import LoliLogo from './LoliLogo.vue'
 
 const config = useConfig()
 const navigation = useNavigation()

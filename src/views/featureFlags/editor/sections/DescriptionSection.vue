@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import FeatureFlagEditorSection from '@/views/featureFlags/editor/FeatureFlagEditorSection.vue'
 import type { FeatureFlag } from '@loli-feature-flags/loli-sdk'
-import TextArea from '@/components/ui/TextArea.vue'
-import Label from '@/components/ui/Label.vue'
+import FeatureFlagEditorSection from '../FeatureFlagEditorSection.vue'
+import Label from '../../../../components/ui/Label.vue'
+import TextArea from '../../../../components/ui/TextArea.vue'
 
 const featureFlag = defineModel<FeatureFlag>({ required: true })
 </script>

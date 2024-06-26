@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import FeatureFlagEditorSection from '@/views/featureFlags/editor/FeatureFlagEditorSection.vue'
 import type { FeatureFlag } from '@loli-feature-flags/loli-sdk'
-import BooleanValueSelect from '@/views/featureFlags/editor/values/BooleanValueSelect.vue'
-import NumberValueInput from '@/views/featureFlags/editor/values/NumberValueInput.vue'
-import StringValueInput from '@/views/featureFlags/editor/values/StringValueInput.vue'
+import NumberValueInput from '../values/NumberValueInput.vue'
+import StringValueInput from '../values/StringValueInput.vue'
+import BooleanValueSelect from '../values/BooleanValueSelect.vue'
+import FeatureFlagEditorSection from '../FeatureFlagEditorSection.vue'
 
 const featureFlag = defineModel<FeatureFlag>({ required: true })
 </script>

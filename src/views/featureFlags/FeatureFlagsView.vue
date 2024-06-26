@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import LoliView from '@/components/LoliView.vue'
-import Button from '@/components/ui/Button.vue'
-import PlusIcon from '@/components/icons/PlusIcon.vue'
-import { useWorkbench } from '@/stores/workbench/store'
 import { computed, toRefs, watchEffect } from 'vue'
-import EmptyState from '@/views/featureFlags/EmptyState.vue'
-import CreateFeatureFlagDialog from '@/views/featureFlags/CreateFeatureFlagDialog.vue'
-import FeatureFlagList from '@/views/featureFlags/FeatureFlagList.vue'
-import { useNavigation } from '@/stores/navigation/store'
-import { useFeatureFlagEditor } from '@/stores/featureFlagEditor'
-import FeatureFlagEditorDialog from '@/views/featureFlags/editor/FeatureFlagEditorDialog.vue'
-import { IssuesCarryOn } from '@/utils/issues'
+import { useWorkbench } from '../../stores/workbench/store'
+import { useNavigation } from '../../stores/navigation/store'
+import { useFeatureFlagEditor } from '../../stores/featureFlagEditor'
+import { IssuesCarryOn } from '../../utils/issues'
+import EmptyState from './EmptyState.vue'
+import FeatureFlagList from './FeatureFlagList.vue'
+import PlusIcon from '../../components/icons/PlusIcon.vue'
+import LoliView from '../../components/LoliView.vue'
+import CreateFeatureFlagDialog from './CreateFeatureFlagDialog.vue'
+import FeatureFlagEditorDialog from './editor/FeatureFlagEditorDialog.vue'
+import Button from '../../components/ui/Button.vue'
 
 const workbench = useWorkbench()
 const navigation = useNavigation()

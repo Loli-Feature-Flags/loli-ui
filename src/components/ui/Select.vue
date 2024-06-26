@@ -12,12 +12,12 @@ import {
   SelectValue,
   SelectViewport
 } from 'radix-vue'
-import ChevronUpDownIcon from '@/components/icons/ChevronUpDownIcon.vue'
-import useLoliUiElementRef from '@/hooks/useLoliUiElementRef'
-import CheckIcon from '@/components/icons/CheckIcon.vue'
-import ChevronUpIcon from '@/components/icons/ChevronUpIcon.vue'
-import ChevronDownIcon from '@/components/icons/ChevronDownIcon.vue'
-import { useConfig } from '@/stores/config/store'
+import { useConfig } from '../../stores/config/store'
+import useLoliUiElementRef from '../../hooks/useLoliUiElementRef'
+import ChevronDownIcon from '../icons/ChevronDownIcon.vue'
+import CheckIcon from '../icons/CheckIcon.vue'
+import ChevronUpIcon from '../icons/ChevronUpIcon.vue'
+import ChevronUpDownIcon from '../icons/ChevronUpDownIcon.vue'
 
 export type SelectOption<VALUE extends string = string> = { value: VALUE; label?: string }
 export type SelectSize = 'small' | 'normal'

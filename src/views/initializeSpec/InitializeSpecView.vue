@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useWorkbench } from '@/stores/workbench/store'
-import Button from '@/components/ui/Button.vue'
-import SparklesIcon from '@/components/icons/SparklesIcon.vue'
-import UndrawUpgradeReGano from '@/components/illustrations/UndrawUpgradeReGano.vue'
+import Button from '../../components/ui/Button.vue'
+import SparklesIcon from '../../components/icons/SparklesIcon.vue'
+import UndrawUpgradeReGano from '../../components/illustrations/UndrawUpgradeReGano.vue'
+import { useWorkbench } from '../../stores/workbench/store'
 
 const workbench = useWorkbench()
 

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import Dialog from '@/components/ui/Dialog.vue'
 import { ref } from 'vue'
-import Button from '@/components/ui/Button.vue'
-import XMarkIcon from '@/components/icons/XMarkIcon.vue'
-import TrashIcon from '@/components/icons/TrashIcon.vue'
-import DefaultDialogTitle from '@/components/ui/DefaultDialogTitle.vue'
+import TrashIcon from '../icons/TrashIcon.vue'
+import XMarkIcon from '../icons/XMarkIcon.vue'
+import DefaultDialogTitle from '../ui/DefaultDialogTitle.vue'
+import Dialog from '../ui/Dialog.vue'
+import Button from '../ui/Button.vue'
 
 defineProps<{ title: string; description: string }>()
 const emit = defineEmits(['delete'])

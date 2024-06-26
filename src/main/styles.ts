@@ -1,4 +1,4 @@
-import LoliApp from '@/LoliApp.ce.vue'
+import LoliApp from '../LoliApp.ce.vue'
 
 /**
  * Creates a style tag

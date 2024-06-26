@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import UndrawEmptyReOpql from '@/components/illustrations/UndrawEmptyReOpql.vue'
+import UndrawEmptyReOpql from '../../components/illustrations/UndrawEmptyReOpql.vue'
 </script>
 
 <template>

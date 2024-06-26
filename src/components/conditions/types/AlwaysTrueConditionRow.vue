@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CheckCircleIcon from '@/components/icons/CheckCircleIcon.vue'
+import CheckCircleIcon from '../../icons/CheckCircleIcon.vue'
 </script>
 
 <template>

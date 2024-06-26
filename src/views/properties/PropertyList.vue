@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { useWorkbench } from '@/stores/workbench/store'
 import { computed, ref } from 'vue'
-import XMarkIcon from '@/components/icons/XMarkIcon.vue'
-import Input from '@/components/ui/Input.vue'
-import Button from '@/components/ui/Button.vue'
-import PropertyListEntry from '@/views/properties/PropertyListEntry.vue'
-import { useNavigation } from '@/stores/navigation/store'
-import { IssuesCarryOn } from '@/utils/issues'
+import { useWorkbench } from '../../stores/workbench/store'
+import { useNavigation } from '../../stores/navigation/store'
+import PropertyListEntry from './PropertyListEntry.vue'
+import XMarkIcon from '../../components/icons/XMarkIcon.vue'
+import Button from '../../components/ui/Button.vue'
+import Input from '../../components/ui/Input.vue'
+import { IssuesCarryOn } from '../../utils/issues'
 
 const workbench = useWorkbench()
 const navigation = useNavigation()

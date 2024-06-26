@@ -1,5 +1,5 @@
 import { type App, createApp } from 'vue'
-import LoliApp from '@/LoliApp.ce.vue'
+import LoliApp from './../LoliApp.ce.vue'
 
 /**
  * Creates a Vue app for {@link LoliApp}.

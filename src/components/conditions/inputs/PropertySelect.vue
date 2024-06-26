@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useWorkbench } from '@/stores/workbench/store'
 import type { Property } from '@loli-feature-flags/loli-sdk'
 import { computed, ref, watch } from 'vue'
-import Select, { type SelectOption } from '@/components/ui/Select.vue'
+import { useWorkbench } from '../../../stores/workbench/store'
+import Select, { type SelectOption } from '../../ui/Select.vue'
 
 const workbench = useWorkbench()
 const property = defineModel<Property | null>({ required: true })

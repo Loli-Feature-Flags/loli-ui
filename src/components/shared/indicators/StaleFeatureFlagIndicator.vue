@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import HelpTooltip from '@/components/ui/HelpTooltip.vue'
-import ExclamationCircleIcon from '@/components/icons/ExclamationCircleIcon.vue'
+import ExclamationCircleIcon from '../../icons/ExclamationCircleIcon.vue'
+import HelpTooltip from '../../ui/HelpTooltip.vue'
 </script>
 
 <template>

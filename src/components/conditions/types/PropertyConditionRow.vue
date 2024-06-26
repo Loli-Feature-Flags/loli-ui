@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import PropertySelect from '@/components/conditions/inputs/PropertySelect.vue'
-import { useWorkbench } from '@/stores/workbench/store'
 import { computed, ref, watch } from 'vue'
 import type { Property, PropertyCondition } from '@loli-feature-flags/loli-sdk'
-import { createDefaultConditionForProperty } from '@/utils/condition'
-import StringPropertyConditionRowExtension from '@/components/conditions/types/property/StringPropertyConditionRowExtension.vue'
-import BooleanArrayPropertyConditionRowExtension from '@/components/conditions/types/property/BooleanArrayPropertyConditionRowExtension.vue'
-import NumberArrayPropertyConditionRowExtension from '@/components/conditions/types/property/NumberArrayPropertyConditionRowExtension.vue'
-import StringArrayPropertyConditionRowExtension from '@/components/conditions/types/property/StringArrayPropertyConditionRowExtension.vue'
-import BooleanPropertyConditionRowExtension from '@/components/conditions/types/property/BooleanPropertyConditionRowExtension.vue'
-import NumberPropertyConditionRowExtension from '@/components/conditions/types/property/NumberPropertyConditionRowExtension.vue'
-import FingerprintIcon from '@/components/icons/FingerprintIcon.vue'
+import { useWorkbench } from '../../../stores/workbench/store'
+import { createDefaultConditionForProperty } from '../../../utils/condition'
+import BooleanArrayPropertyConditionRowExtension from './property/BooleanArrayPropertyConditionRowExtension.vue'
+import NumberArrayPropertyConditionRowExtension from './property/NumberArrayPropertyConditionRowExtension.vue'
+import StringArrayPropertyConditionRowExtension from './property/StringArrayPropertyConditionRowExtension.vue'
+import BooleanPropertyConditionRowExtension from './property/BooleanPropertyConditionRowExtension.vue'
+import NumberPropertyConditionRowExtension from './property/NumberPropertyConditionRowExtension.vue'
+import StringPropertyConditionRowExtension from './property/StringPropertyConditionRowExtension.vue'
+import PropertySelect from '../inputs/PropertySelect.vue'
+import FingerprintIcon from '../../icons/FingerprintIcon.vue'
 
 const workbench = useWorkbench()
 

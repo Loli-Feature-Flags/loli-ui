@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { PopoverArrow, PopoverContent, PopoverPortal, PopoverRoot, PopoverTrigger } from 'radix-vue'
-import useLoliUiElementRef from '@/hooks/useLoliUiElementRef'
-import { useConfig } from '@/stores/config/store'
+import { useConfig } from '../../stores/config/store'
+import useLoliUiElementRef from '../../hooks/useLoliUiElementRef'
 
 const config = useConfig()
 

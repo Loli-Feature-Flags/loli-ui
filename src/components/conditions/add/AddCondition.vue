@@ -12,13 +12,13 @@ import {
   dateToDateTimeConditionOperand
 } from '@loli-feature-flags/loli-sdk'
 import { computed, ref } from 'vue'
-import { useWorkbench } from '@/stores/workbench/store'
-import PlusIcon from '@/components/icons/PlusIcon.vue'
-import { createDefaultConditionForProperty } from '@/utils/condition'
-import Popover from '@/components/ui/Popover.vue'
-import Button from '@/components/ui/Button.vue'
-import HelpTooltip from '@/components/ui/HelpTooltip.vue'
-import { injectRootSegment } from '@/utils/segments'
+import { useWorkbench } from '../../../stores/workbench/store'
+import { injectRootSegment } from '../../../utils/segments'
+import { createDefaultConditionForProperty } from '../../../utils/condition'
+import Popover from '../../ui/Popover.vue'
+import PlusIcon from '../../icons/PlusIcon.vue'
+import HelpTooltip from '../../ui/HelpTooltip.vue'
+import Button from '../../ui/Button.vue'
 
 const workbench = useWorkbench()
 const popoverOpen = ref(false)

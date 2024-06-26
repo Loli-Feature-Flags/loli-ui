@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Bars3Icon from '@/components/icons/Bars3Icon.vue'
-import { DRAG_HANDLE_CLASS } from '@/constants'
+import { DRAG_HANDLE_CLASS } from '../../constants'
+import Bars3Icon from '../icons/Bars3Icon.vue'
 </script>
 
 <template>

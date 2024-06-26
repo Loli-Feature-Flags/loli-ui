@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import Dialog from '@/components/ui/Dialog.vue'
-import Input from '@/components/ui/Input.vue'
-import { ref } from 'vue'
-import Label from '@/components/ui/Label.vue'
-import Select, { type SelectOption } from '@/components/ui/Select.vue'
-import Button from '@/components/ui/Button.vue'
-import PlusIcon from '@/components/icons/PlusIcon.vue'
+import { computed, ref } from 'vue'
 import {
   type FeatureFlag,
   FeatureFlagNameRegex,
   type FeatureFlagType,
   FeatureFlagTypes
 } from '@loli-feature-flags/loli-sdk'
-import { i18n } from '@/i18n'
-import { useNavigation } from '@/stores/navigation/store'
-import { useWorkbench } from '@/stores/workbench/store'
-import DefaultDialogTitle from '@/components/ui/DefaultDialogTitle.vue'
-import ToggleIcon from '@/components/icons/ToggleIcon.vue'
-import Form from '@/components/ui/Form.vue'
+import { useNavigation } from '../../stores/navigation/store'
+import { useWorkbench } from '../../stores/workbench/store'
+import Select, { type SelectOption } from '../../components/ui/Select.vue'
+import { useI18n } from 'vue-i18n'
+import PlusIcon from '../../components/icons/PlusIcon.vue'
+import ToggleIcon from '../../components/icons/ToggleIcon.vue'
+import DefaultDialogTitle from '../../components/ui/DefaultDialogTitle.vue'
+import Dialog from '../../components/ui/Dialog.vue'
+import Form from '../../components/ui/Form.vue'
+import Input from '../../components/ui/Input.vue'
+import Button from '../../components/ui/Button.vue'
+import Label from '../../components/ui/Label.vue'
 
 const open = defineModel<boolean>('open', { default: false })
 
@@ -26,10 +26,15 @@ const workbench = useWorkbench()
 
 const name = ref<string>('')
 const type = ref<FeatureFlagType>('boolean')
-const typeOptions: SelectOption<FeatureFlagType>[] = FeatureFlagTypes.map((type) => ({
-  value: type,
-  label: i18n.global.t(`spec.featureFlag.type.${type}`)
-}))
+
+const i18n = useI18n()
+
+const typeOptions = computed<SelectOption<FeatureFlagType>[]>(() =>
+  FeatureFlagTypes.map((type) => ({
+    value: type,
+    label: i18n.t(`spec.featureFlag.type.${type}`)
+  }))
+)
 
 function addNewFeatureFlag() {
   const newFeatureFlag: FeatureFlag =

@@ -1,9 +1,6 @@
 <script setup lang="ts">
-import LoliView from '@/components/LoliView.vue'
 import { computed, ref, watch } from 'vue'
-import { useWorkbench } from '@/stores/workbench/store'
 import { useI18n } from 'vue-i18n'
-import Button from '@/components/ui/Button.vue'
 import {
   deserializeLoliSpecFromJson,
   LoliError,
@@ -13,6 +10,9 @@ import {
   LoliSpecSemanticIssuesError,
   serializeLoliSpecAsJson
 } from '@loli-feature-flags/loli-sdk'
+import { useWorkbench } from '../../stores/workbench/store'
+import LoliView from '../../components/LoliView.vue'
+import Button from '../../components/ui/Button.vue'
 
 const { t } = useI18n()
 const workbench = useWorkbench()

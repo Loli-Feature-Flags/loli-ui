@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import Dialog from '@/components/ui/Dialog.vue'
 import type { FeatureFlag } from '@loli-feature-flags/loli-sdk'
-import FeatureFlagEditorDialogTitle from '@/views/featureFlags/editor/FeatureFlagEditorDialogTitle.vue'
-import DescriptionSection from '@/views/featureFlags/editor/sections/DescriptionSection.vue'
-import DefaultValueSection from '@/views/featureFlags/editor/sections/DefaultValueSection.vue'
-import TargetingSection from '@/views/featureFlags/editor/sections/TargetingSection.vue'
-import type { IssuesCarryOn } from '@/utils/issues'
+import type { IssuesCarryOn } from '../../../utils/issues'
+import DefaultValueSection from './sections/DefaultValueSection.vue'
+import TargetingSection from './sections/TargetingSection.vue'
+import DescriptionSection from './sections/DescriptionSection.vue'
+import FeatureFlagEditorDialogTitle from './FeatureFlagEditorDialogTitle.vue'
+import Dialog from '../../../components/ui/Dialog.vue'
 
 const open = defineModel<boolean>('open', { default: false })
 const featureFlag = defineModel<FeatureFlag | null>()

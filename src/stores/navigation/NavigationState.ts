@@ -1,8 +1,8 @@
 import { z } from 'zod'
-import { FeatureFlagsNavigationStateSchema } from '@/stores/navigation/FeatureFlagsNavigationState'
-import { SegmentsNavigationStateSchema } from '@/stores/navigation/SegmentsNavigationState'
-import { PropertiesNavigationStateSchema } from '@/stores/navigation/PropertiesNavigationState'
-import { JsonEditorNavigationStateSchema } from '@/stores/navigation/JsonEditorNavigationState'
+import { FeatureFlagsNavigationStateSchema } from './FeatureFlagsNavigationState'
+import { SegmentsNavigationStateSchema } from './SegmentsNavigationState'
+import { PropertiesNavigationStateSchema } from './PropertiesNavigationState'
+import { JsonEditorNavigationStateSchema } from './JsonEditorNavigationState'
 
 export const NavigationStateSchema = z.discriminatedUnion('view', [
   FeatureFlagsNavigationStateSchema,

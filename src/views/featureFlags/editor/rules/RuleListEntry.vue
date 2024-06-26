@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import TrashIcon from '@/components/icons/TrashIcon.vue'
-import DocumentDuplicateIcon from '@/components/icons/DocumentDuplicateIcon.vue'
 import { type FeatureFlag } from '@loli-feature-flags/loli-sdk'
-import RuleListEntryValues from '@/views/featureFlags/editor/rules/RuleListEntryValues.vue'
-import ConditionSet from '@/components/conditions/ConditionSet.vue'
-import Button from '@/components/ui/Button.vue'
-import ConfirmDeleteDialog from '@/components/shared/ConfirmDeleteDialog.vue'
-import useConditionSetNestedColoring from '@/hooks/useConditionSetNestedColoring'
-import type { IssuesCarryOn } from '@/utils/issues'
-import DragHandle from '@/components/shared/DragHandle.vue'
-import Switch from '@/components/ui/Switch.vue'
 import { computed } from 'vue'
+import type { IssuesCarryOn } from '../../../../utils/issues'
+import useConditionSetNestedColoring from '../../../../hooks/useConditionSetNestedColoring'
+import Switch from '../../../../components/ui/Switch.vue'
+import ConfirmDeleteDialog from '../../../../components/shared/ConfirmDeleteDialog.vue'
+import TrashIcon from '../../../../components/icons/TrashIcon.vue'
+import Button from '../../../../components/ui/Button.vue'
+import RuleListEntryValues from './RuleListEntryValues.vue'
+import ConditionSet from '../../../../components/conditions/ConditionSet.vue'
+import DragHandle from '../../../../components/shared/DragHandle.vue'
+import DocumentDuplicateIcon from '../../../../components/icons/DocumentDuplicateIcon.vue'
 
 const featureFlag = defineModel<FeatureFlag>({ required: true })
 const props = defineProps<{ ruleIndex: number; issuesCarryOn: IssuesCarryOn }>()

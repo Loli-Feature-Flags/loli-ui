@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Input from '@/components/ui/Input.vue'
-import Slider from '@/components/ui/Slider.vue'
+import Slider from '../../../../components/ui/Slider.vue'
+import Input from '../../../../components/ui/Input.vue'
 
 const model = defineModel<number>({ required: true })
 </script>

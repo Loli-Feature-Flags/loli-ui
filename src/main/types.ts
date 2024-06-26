@@ -1,11 +1,11 @@
 import type { LoliSpec } from '@loli-feature-flags/loli-sdk'
-import type { NavigationState } from '@/stores/navigation/NavigationState'
+import type { NavigationState } from '../stores/navigation/NavigationState'
 import type {
   HideableView,
-  SpecIssueListener,
   NavigationStateChangeListener,
-  SpecChangeListener
-} from '@/stores/config/types'
+  SpecChangeListener,
+  SpecIssueListener
+} from '../stores/config/types'
 
 export type LoliUiMountOptions = {
   initialSpec?: LoliSpec | object | string | null

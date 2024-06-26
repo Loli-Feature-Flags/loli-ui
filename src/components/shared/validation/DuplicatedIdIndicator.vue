@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import ErrorIndicator from '@/components/shared/validation/ErrorIndicator.vue'
-import ExclamationTriangleIcon from '@/components/icons/ExclamationTriangleIcon.vue'
+import ExclamationTriangleIcon from '../../icons/ExclamationTriangleIcon.vue'
+import ErrorIndicator from './ErrorIndicator.vue'
 </script>
 
 <template>

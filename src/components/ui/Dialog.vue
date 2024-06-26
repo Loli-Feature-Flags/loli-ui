@@ -10,9 +10,9 @@ import {
   DialogTrigger,
   VisuallyHidden
 } from 'radix-vue'
-import useLoliUiElementRef from '@/hooks/useLoliUiElementRef'
-import XMarkIcon from '@/components/icons/XMarkIcon.vue'
-import { useConfig } from '@/stores/config/store'
+import { useConfig } from '../../stores/config/store'
+import useLoliUiElementRef from '../../hooks/useLoliUiElementRef'
+import XMarkIcon from '../icons/XMarkIcon.vue'
 
 export type DialogSize = 'small' | 'near-fullscreen' | 'fullscreen'
 

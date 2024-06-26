@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useWorkbench } from '@/stores/workbench/store'
 import { computed } from 'vue'
-import Select, { type SelectOption } from '@/components/ui/Select.vue'
-import { injectRootSegment } from '@/utils/segments'
+import { useWorkbench } from '../../../stores/workbench/store'
+import { injectRootSegment } from '../../../utils/segments'
+import Select, { type SelectOption } from '../../ui/Select.vue'
 
 const workbench = useWorkbench()
 const segmentId = defineModel<string>('segmentId', { required: true })

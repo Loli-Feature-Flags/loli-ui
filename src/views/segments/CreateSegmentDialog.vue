@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import Dialog from '@/components/ui/Dialog.vue'
-import DefaultDialogTitle from '@/components/ui/DefaultDialogTitle.vue'
-import PlusIcon from '@/components/icons/PlusIcon.vue'
-import Button from '@/components/ui/Button.vue'
-import { useWorkbench } from '@/stores/workbench/store'
 import { ref } from 'vue'
-import Label from '@/components/ui/Label.vue'
-import Input from '@/components/ui/Input.vue'
-import { useNavigation } from '@/stores/navigation/store'
 import { type Segment, SegmentNameRegex } from '@loli-feature-flags/loli-sdk'
-import Form from '@/components/ui/Form.vue'
+import { useWorkbench } from '../../stores/workbench/store'
+import { useNavigation } from '../../stores/navigation/store'
+import PlusIcon from '../../components/icons/PlusIcon.vue'
+import DefaultDialogTitle from '../../components/ui/DefaultDialogTitle.vue'
+import Label from '../../components/ui/Label.vue'
+import Input from '../../components/ui/Input.vue'
+import Button from '../../components/ui/Button.vue'
+import Form from '../../components/ui/Form.vue'
+import Dialog from '../../components/ui/Dialog.vue'
 
 const workbench = useWorkbench()
 const navigation = useNavigation()

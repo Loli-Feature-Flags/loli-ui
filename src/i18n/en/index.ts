@@ -67,6 +67,9 @@ export default {
         numberArray: 'Number Array',
         boolean: 'Boolean',
         booleanArray: 'Boolean Array'
+      },
+      validation: {
+        pathPattern: 'Must denote a JavaScript style nested object accessor (e.g. user.id).'
       }
     },
     featureFlag: {

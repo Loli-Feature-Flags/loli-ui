@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { IssuesCarryOn } from '@/utils/issues'
+import type { IssuesCarryOn } from '../../utils/issues'
 
 defineProps<{ issuesCarryOn?: IssuesCarryOn }>()
 defineEmits(['click'])

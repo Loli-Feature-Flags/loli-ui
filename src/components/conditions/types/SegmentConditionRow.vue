@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import type { SegmentCondition } from '@loli-feature-flags/loli-sdk'
-import RectangleGroupIcon from '@/components/icons/RectangleGroupIcon.vue'
-import SegmentSelect from '@/components/conditions/inputs/SegmentSelect.vue'
-import SegmentConditionOperatorSelect from '@/components/conditions/inputs/SegmentConditionOperatorSelect.vue'
-import ArrowTopRightOnSquare from '@/components/icons/ArrowTopRightOnSquare.vue'
-import Button from '@/components/ui/Button.vue'
-import { useNavigation } from '@/stores/navigation/store'
+import { useNavigation } from '../../../stores/navigation/store'
+import SegmentConditionOperatorSelect from '../inputs/SegmentConditionOperatorSelect.vue'
+import ArrowTopRightOnSquare from '../../icons/ArrowTopRightOnSquare.vue'
+import SegmentSelect from '../inputs/SegmentSelect.vue'
+import RectangleGroupIcon from '../../icons/RectangleGroupIcon.vue'
 
 const navigation = useNavigation()
 

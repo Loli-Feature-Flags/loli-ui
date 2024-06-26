@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import Label from '@/components/ui/Label.vue'
-import Select, { type SelectOption, type SelectSize } from '@/components/ui/Select.vue'
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
+import Select, { type SelectOption } from '../../../../components/ui/Select.vue'
+import Label from '../../../../components/ui/Label.vue'
 
 const model = defineModel<boolean>({ required: true })
 const props = defineProps<{ label?: string; small?: boolean }>()

@@ -2,16 +2,16 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
 import type { LoliSpec } from '@loli-feature-flags/loli-sdk'
-import type { NavigationState } from '@/stores/navigation/NavigationState'
 import type {
   HideableView,
-  SpecIssueListener,
-  SpecIssueType,
   NavigationStateChangeListener,
   NavigationStateChangeSource,
   NavigationStateChangeType,
-  SpecChangeListener
-} from '@/stores/config/types'
+  SpecChangeListener,
+  SpecIssueListener,
+  SpecIssueType
+} from './types'
+import type { NavigationState } from '../navigation/NavigationState'
 
 export const useConfig = defineStore('config', () => {
   const specChangeListeners = ref<Set<SpecChangeListener>>(new Set())

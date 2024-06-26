@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TagsInput from '@/components/ui/TagsInput.vue'
+import TagsInput from '../../ui/TagsInput.vue'
 
 const operandsModel = defineModel<string[]>({ required: true })
 </script>

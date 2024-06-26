@@ -1,7 +1,7 @@
-import type { LoliUiMountOptions } from '@/main/types'
-import { useWorkbench } from '@/stores/workbench/store'
-import { useConfig } from '@/stores/config/store'
-import { useNavigation } from '@/stores/navigation/store'
+import type { LoliUiMountOptions } from './types'
+import { useWorkbench } from '../stores/workbench/store'
+import { useNavigation } from '../stores/navigation/store'
+import { useConfig } from '../stores/config/store'
 
 /**
  * Initializes the Loli UI app pinia stores/configs/options based

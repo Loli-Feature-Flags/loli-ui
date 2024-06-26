@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import type { Condition, ConditionSet } from '@loli-feature-flags/loli-sdk'
-import ConditionSetConditionList from '@/components/conditions/ConditionSetConditionList.vue'
-import AddCondition from '@/components/conditions/add/AddCondition.vue'
-import Select, { type SelectOption } from '@/components/ui/Select.vue'
+
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
-import useConditionSetNestedColoring from '@/hooks/useConditionSetNestedColoring'
-import type { IssuesCarryOn } from '@/utils/issues'
+import type { IssuesCarryOn } from '../../utils/issues'
+import Select, { type SelectOption } from '../ui/Select.vue'
+import useConditionSetNestedColoring from '../../hooks/useConditionSetNestedColoring'
+import AddCondition from './add/AddCondition.vue'
+import ConditionSetConditionList from './ConditionSetConditionList.vue'
 
 const conditionSetModel = defineModel<ConditionSet>({ required: true })
 const props = defineProps<{ issuesCarryOn: IssuesCarryOn; flat?: boolean }>()

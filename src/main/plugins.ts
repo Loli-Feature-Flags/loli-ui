@@ -1,6 +1,6 @@
 import type { App } from 'vue'
 import { createPinia } from 'pinia'
-import { i18n } from '@/i18n/index'
+import { i18n } from '../i18n/index'
 
 /**
  * Initializes all Vue plugins that Loli UI uses.

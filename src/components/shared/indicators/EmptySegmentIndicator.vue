@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import HelpTooltip from '@/components/ui/HelpTooltip.vue'
-import ExclamationTriangleIcon from '@/components/icons/ExclamationTriangleIcon.vue'
+import ExclamationTriangleIcon from '../../icons/ExclamationTriangleIcon.vue'
+import HelpTooltip from '../../ui/HelpTooltip.vue'
 </script>
 
 <template>

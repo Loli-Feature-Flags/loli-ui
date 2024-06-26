@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import LoliView from '@/components/LoliView.vue'
-import { useWorkbench } from '@/stores/workbench/store'
-import EmptyState from '@/views/segments/EmptyState.vue'
-import { useNavigation } from '@/stores/navigation/store'
 import { computed, watchEffect } from 'vue'
 import type { Segment } from '@loli-feature-flags/loli-sdk'
-import PlusIcon from '@/components/icons/PlusIcon.vue'
-import Button from '@/components/ui/Button.vue'
-import CreateSegmentDialog from '@/views/segments/CreateSegmentDialog.vue'
-import SegmentList from '@/views/segments/SegmentList.vue'
-import EditSegmentDialog from '@/views/segments/EditSegmentDialog.vue'
-import { IssuesCarryOn } from '@/utils/issues'
+import { useWorkbench } from '../../stores/workbench/store'
+import { useNavigation } from '../../stores/navigation/store'
+import { IssuesCarryOn } from '../../utils/issues'
+import SegmentList from './SegmentList.vue'
+import PlusIcon from '../../components/icons/PlusIcon.vue'
+import LoliView from '../../components/LoliView.vue'
+import EditSegmentDialog from './EditSegmentDialog.vue'
+import CreateSegmentDialog from './CreateSegmentDialog.vue'
+import Button from '../../components/ui/Button.vue'
+import EmptyState from '../segments/EmptyState.vue'
 
 const workbench = useWorkbench()
 const navigation = useNavigation()

@@ -8,7 +8,7 @@ import {
 } from '@loli-feature-flags/loli-sdk'
 import { computed, ref, toRaw, watch, watchEffect } from 'vue'
 import { init } from '@paralleldrive/cuid2'
-import { useConfig } from '@/stores/config/store'
+import { useConfig } from '../config/store'
 
 const createRandomId = init({
   length: 8

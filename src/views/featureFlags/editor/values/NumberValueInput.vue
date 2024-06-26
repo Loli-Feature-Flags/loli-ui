@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Label from '@/components/ui/Label.vue'
-import Input from '@/components/ui/Input.vue'
+import Input from '../../../../components/ui/Input.vue'
+import Label from '../../../../components/ui/Label.vue'
 
 defineProps<{ label?: string; small?: boolean }>()
 const model = defineModel<number>({ required: true })

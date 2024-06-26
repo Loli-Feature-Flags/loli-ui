@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import LoliView from '@/components/LoliView.vue'
-import EmptyState from '@/views/properties/EmptyState.vue'
-import { useWorkbench } from '@/stores/workbench/store'
-import PlusIcon from '@/components/icons/PlusIcon.vue'
-import Button from '@/components/ui/Button.vue'
-import CreatePropertyDialog from '@/views/properties/CreatePropertyDialog.vue'
-import PropertyList from '@/views/properties/PropertyList.vue'
 import { computed, watchEffect } from 'vue'
-import { useNavigation } from '@/stores/navigation/store'
 import type { Property } from '@loli-feature-flags/loli-sdk'
-import EditPropertyDialog from '@/views/properties/EditPropertyDialog.vue'
-import { IssuesCarryOn } from '@/utils/issues'
+import { useNavigation } from '../../stores/navigation/store'
+import { useWorkbench } from '../../stores/workbench/store'
+import { IssuesCarryOn } from '../../utils/issues'
+import EmptyState from '../properties/EmptyState.vue'
+import PropertyList from './PropertyList.vue'
+import PlusIcon from '../../components/icons/PlusIcon.vue'
+import LoliView from '../../components/LoliView.vue'
+import EditPropertyDialog from './EditPropertyDialog.vue'
+import CreatePropertyDialog from './CreatePropertyDialog.vue'
+import Button from '../../components/ui/Button.vue'
 
 const workbench = useWorkbench()
 const navigation = useNavigation()

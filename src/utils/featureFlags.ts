@@ -1,5 +1,5 @@
 import type { FeatureFlag } from '@loli-feature-flags/loli-sdk'
-import { i18n } from '@/i18n'
+import { i18n } from '../i18n/index'
 
 export function i18nFeatureFlagDefaultValue(featureFlag: FeatureFlag): string {
   if (featureFlag.type === 'boolean') {

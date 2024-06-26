@@ -6,7 +6,7 @@ import {
   TagsInputItemText,
   TagsInputRoot
 } from 'radix-vue'
-import XMarkIcon from '@/components/icons/XMarkIcon.vue'
+import XMarkIcon from '../icons/XMarkIcon.vue'
 
 export type TagsInputSize = 'small' | 'normal'
 

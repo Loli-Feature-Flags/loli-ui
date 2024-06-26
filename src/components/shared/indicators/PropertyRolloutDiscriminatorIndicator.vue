@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import HelpTooltip from '@/components/ui/HelpTooltip.vue'
-import ViewfinderCircleIcon from '@/components/icons/ViewfinderCircleIcon.vue'
+import ViewfinderCircleIcon from '../../icons/ViewfinderCircleIcon.vue'
+import HelpTooltip from '../../ui/HelpTooltip.vue'
 </script>
 
 <template>

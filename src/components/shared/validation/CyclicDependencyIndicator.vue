@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import ArrowPathIcon from '@/components/icons/ArrowPathIcon.vue'
-import type { IssuesCarryOn } from '@/utils/issues'
 import { SemanticIssueType } from '@loli-feature-flags/loli-sdk'
-import ErrorIndicator from '@/components/shared/validation/ErrorIndicator.vue'
+import type { IssuesCarryOn } from '../../../utils/issues'
+import ArrowPathIcon from '../../icons/ArrowPathIcon.vue'
+import ErrorIndicator from './ErrorIndicator.vue'
 
 defineProps<{ issuesCarryOn: IssuesCarryOn }>()
 </script>

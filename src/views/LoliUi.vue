@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { useNavigation } from '@/stores/navigation/store'
-import { LoliViewMap } from '@/views/map'
-import LoliNavigation from '@/components/LoliNavigation.vue'
 import { computed, provide, ref, watchEffect } from 'vue'
-import { useWorkbench } from '@/stores/workbench/store'
-import InitializeSpecView from '@/views/initializeSpec/InitializeSpecView.vue'
-import { useConfig } from '@/stores/config/store'
-import NoViewAccessibleView from '@/views/noViewAccessible/NoViewAccessibleView.vue'
-import type { NavigationState } from '@/stores/navigation/NavigationState'
-import AnimateChangingContentHeight from '@/components/ui/AnimateChangingContentHeight.vue'
+import { useConfig } from '../stores/config/store'
+import { useWorkbench } from '../stores/workbench/store'
+import { useNavigation } from '../stores/navigation/store'
+import { LoliViewMap } from './map'
+import type { NavigationState } from '../stores/navigation/NavigationState'
+import NoViewAccessibleView from './noViewAccessible/NoViewAccessibleView.vue'
+import LoliNavigation from '../components/LoliNavigation.vue'
+import InitializeSpecView from './initializeSpec/InitializeSpecView.vue'
+import AnimateChangingContentHeight from '../components/ui/AnimateChangingContentHeight.vue'
 
 const config = useConfig()
 const workbench = useWorkbench()

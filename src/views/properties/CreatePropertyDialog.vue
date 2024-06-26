@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import Label from '@/components/ui/Label.vue'
-import Select, { type SelectOption } from '@/components/ui/Select.vue'
-import Dialog from '@/components/ui/Dialog.vue'
-import PlusIcon from '@/components/icons/PlusIcon.vue'
-import Input from '@/components/ui/Input.vue'
-import Button from '@/components/ui/Button.vue'
-import { useWorkbench } from '@/stores/workbench/store'
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { type Property, type PropertyType, PropertyTypes } from '@loli-feature-flags/loli-sdk'
-import { i18n } from '@/i18n'
-import DefaultDialogTitle from '@/components/ui/DefaultDialogTitle.vue'
-import FingerprintIcon from '@/components/icons/FingerprintIcon.vue'
-import Switch from '@/components/ui/Switch.vue'
-import Form from '@/components/ui/Form.vue'
+import { useWorkbench } from '../../stores/workbench/store'
+import Select, { type SelectOption } from '../../components/ui/Select.vue'
+import { useI18n } from 'vue-i18n'
+import PlusIcon from '../../components/icons/PlusIcon.vue'
+import Switch from '../../components/ui/Switch.vue'
+import Label from '../../components/ui/Label.vue'
+import FingerprintIcon from '../../components/icons/FingerprintIcon.vue'
+import DefaultDialogTitle from '../../components/ui/DefaultDialogTitle.vue'
+import Form from '../../components/ui/Form.vue'
+import Input from '../../components/ui/Input.vue'
+import Dialog from '../../components/ui/Dialog.vue'
+import Button from '../../components/ui/Button.vue'
 
 const workbench = useWorkbench()
 
@@ -23,10 +23,14 @@ const name = ref('')
 const type = ref<PropertyType>('string')
 const rolloutDiscriminator = ref(false)
 
-const typeOptions: SelectOption<PropertyType>[] = PropertyTypes.map((propertyType) => ({
-  value: propertyType,
-  label: i18n.global.t(`spec.property.type.${propertyType}`)
-}))
+const i18n = useI18n()
+
+const typeOptions = computed<SelectOption<PropertyType>[]>(() =>
+  PropertyTypes.map((propertyType) => ({
+    value: propertyType,
+    label: i18n.t(`spec.property.type.${propertyType}`)
+  }))
+)
 
 function addNewProperty() {
   const newProperty: Property = {
@@ -82,6 +86,13 @@ function addNewProperty() {
           type="text"
           required
           autocomplete="off"
+          :validator="
+            (value) => {
+              return (
+                /^[^. \n]+(\.[^. \n]+)*$/.test(value) || $t('spec.property.validation.pathPattern')
+              )
+            }
+          "
         />
       </Label>
 

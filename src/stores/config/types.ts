@@ -1,5 +1,5 @@
-import type { NavigationState } from '@/stores/navigation/NavigationState'
 import type { LoliSpec } from '@loli-feature-flags/loli-sdk'
+import type { NavigationState } from '../navigation/NavigationState'
 
 export type SpecChangeListener = (spec: LoliSpec) => void
 

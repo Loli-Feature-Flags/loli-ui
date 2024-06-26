@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { ConditionSetCondition } from '@loli-feature-flags/loli-sdk'
-import ConditionSet from '@/components/conditions/ConditionSet.vue'
-import type { IssuesCarryOn } from '@/utils/issues'
+import type { IssuesCarryOn } from '../../../utils/issues'
+import ConditionSet from '../ConditionSet.vue'
 
 const conditionSetConditionModel = defineModel<ConditionSetCondition>({ required: true })
 defineProps<{ issuesCarryOn: IssuesCarryOn }>()

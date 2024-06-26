@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { StringCondition, StringConditionOperator } from '@loli-feature-flags/loli-sdk'
-import StringConditionOperatorSelect from '@/components/conditions/inputs/StringConditionOperatorSelect.vue'
-import QuantifierSelector from '@/components/conditions/inputs/QuantifierSelector.vue'
-import StringOperands from '@/components/conditions/inputs/StringOperands.vue'
 import { computed } from 'vue'
+import StringOperands from '../../inputs/StringOperands.vue'
+import QuantifierSelector from '../../inputs/QuantifierSelector.vue'
+import StringConditionOperatorSelect from '../../inputs/StringConditionOperatorSelect.vue'
 
 const conditionModel = defineModel<StringCondition>({ required: true })
 

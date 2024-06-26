@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Button from '@/components/ui/Button.vue'
-import UndrawPersonalSettings from '@/components/illustrations/UndrawPersonalSettings.vue'
-import PlusIcon from '@/components/icons/PlusIcon.vue'
+import Button from '../../components/ui/Button.vue'
+import PlusIcon from '../../components/icons/PlusIcon.vue'
+import UndrawPersonalSettings from '../../components/illustrations/UndrawPersonalSettings.vue'
 
 defineEmits(['add'])
 </script>

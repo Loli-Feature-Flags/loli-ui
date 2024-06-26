@@ -17,7 +17,7 @@
  * This way, all styles only apply to elements within the Loli UI.
  */
 
-import LoliUi from '@/views/LoliUi.vue'
+import LoliUi from './views/LoliUi.vue'
 </script>
 
 <template>

@@ -3,9 +3,9 @@ import type {
   BooleanArrayCondition,
   BooleanArrayConditionOperator
 } from '@loli-feature-flags/loli-sdk'
-import BooleanArrayConditionOperatorSelect from '@/components/conditions/inputs/BooleanArrayConditionOperatorSelect.vue'
-import QuantifierSelector from '@/components/conditions/inputs/QuantifierSelector.vue'
 import { computed } from 'vue'
+import BooleanArrayConditionOperatorSelect from '../../inputs/BooleanArrayConditionOperatorSelect.vue'
+import QuantifierSelector from '../../inputs/QuantifierSelector.vue'
 
 const conditionModel = defineModel<BooleanArrayCondition>({ required: true })
 

@@ -1,7 +1,7 @@
 <script setup lang="ts" generic="T extends string | number">
 import { computed, ref, watchEffect } from 'vue'
-import HelpTooltip from '@/components/ui/HelpTooltip.vue'
-import ValidationError from '@/components/ui/ValidationError.vue'
+import HelpTooltip from './HelpTooltip.vue'
+import ValidationError from './ValidationError.vue'
 
 export type InputSize = 'small' | 'normal' | 'large'
 

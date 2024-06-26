@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import PlusIcon from '@/components/icons/PlusIcon.vue'
-import Button from '@/components/ui/Button.vue'
-import UndrawPlaceholders from '@/components/illustrations/UndrawPlaceholders.vue'
+import PlusIcon from '../../components/icons/PlusIcon.vue'
+import UndrawPlaceholders from '../../components/illustrations/UndrawPlaceholders.vue'
+import Button from '../../components/ui/Button.vue'
 
 defineEmits(['add'])
 </script>
