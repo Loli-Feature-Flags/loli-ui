@@ -22,30 +22,28 @@ export const useFeatureFlagEditor = defineStore('featureFlagEditor', () => {
     return null
   })
 
-  const activeFeatureFlagIndex = computed(() => {
-    if (!activeFeatureFlag.value) return -1
-    return workbench.spec.featureFlags.indexOf(activeFeatureFlag.value)
-  })
-
   function deleteActiveFeatureFlag() {
     const state = navigation.state
 
-    if (activeFeatureFlag.value && activeFeatureFlagIndex.value >= 0) {
-      if (
-        state.view === 'featureFlags' &&
-        state.subview?.type === 'edit' &&
-        state.subview.featureFlagId === activeFeatureFlag.value.id
-      ) {
-        navigation.replace({ view: 'featureFlags' })
-      }
+    if (!activeFeatureFlag.value) return
 
-      workbench.spec.featureFlags.splice(activeFeatureFlagIndex.value, 1)
+    const activeFeatureFlagIndex = workbench.spec.featureFlags.indexOf(activeFeatureFlag.value)
+
+    if (activeFeatureFlagIndex < 0) return
+
+    if (
+      state.view === 'featureFlags' &&
+      state.subview?.type === 'edit' &&
+      state.subview.featureFlagId === activeFeatureFlag.value.id
+    ) {
+      navigation.replace({ view: 'featureFlags' })
     }
+
+    workbench.spec.featureFlags.splice(activeFeatureFlagIndex, 1)
   }
 
   return {
     activeFeatureFlag,
-    activeFeatureFlagIndex,
     deleteActiveFeatureFlag
   }
 })

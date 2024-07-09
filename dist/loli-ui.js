@@ -6412,7 +6412,7 @@ const Nn = Fu("config", () => {
   };
 });
 function Qh(e) {
-  const t = e.getFullYear().toString(), n = ("00" + (e.getMonth() + 1).toString()).slice(-2), r = ("00" + e.getDate().toString()).slice(-2), o = ("00" + e.getHours().toString()).slice(-2), a = ("00" + e.getMinutes().toString()).slice(-2), s = ("00" + e.getSeconds().toString()).slice(-2);
+  const t = ("0000" + e.getFullYear().toString()).slice(-4), n = ("00" + (e.getMonth() + 1).toString()).slice(-2), r = ("00" + e.getDate().toString()).slice(-2), o = ("00" + e.getHours().toString()).slice(-2), a = ("00" + e.getMinutes().toString()).slice(-2), s = ("00" + e.getSeconds().toString()).slice(-2);
   return {
     // Zod date schema: https://github.com/colinhacks/zod?tab=readme-ov-file#dates
     date: `${t}-${n}-${r}`,
@@ -10651,23 +10651,24 @@ const o7 = r7({
   };
 }), c7 = Fu("featureFlagEditor", () => {
   const e = At(), t = gn(), n = K(() => {
-    var s;
-    const a = t.state;
-    if (a.view === "featureFlags" && ((s = a.subview) == null ? void 0 : s.type) === "edit") {
-      const i = a.subview.featureFlagId;
-      return e.spec.featureFlags.find((l) => l.id === i) ?? null;
+    var a;
+    const o = t.state;
+    if (o.view === "featureFlags" && ((a = o.subview) == null ? void 0 : a.type) === "edit") {
+      const s = o.subview.featureFlagId;
+      return e.spec.featureFlags.find((i) => i.id === s) ?? null;
     }
     return null;
-  }), r = K(() => n.value ? e.spec.featureFlags.indexOf(n.value) : -1);
-  function o() {
+  });
+  function r() {
     var s;
-    const a = t.state;
-    n.value && r.value >= 0 && (a.view === "featureFlags" && ((s = a.subview) == null ? void 0 : s.type) === "edit" && a.subview.featureFlagId === n.value.id && t.replace({ view: "featureFlags" }), e.spec.featureFlags.splice(r.value, 1));
+    const o = t.state;
+    if (!n.value) return;
+    const a = e.spec.featureFlags.indexOf(n.value);
+    a < 0 || (o.view === "featureFlags" && ((s = o.subview) == null ? void 0 : s.type) === "edit" && o.subview.featureFlagId === n.value.id && t.replace({ view: "featureFlags" }), e.spec.featureFlags.splice(a, 1));
   }
   return {
     activeFeatureFlag: n,
-    activeFeatureFlagIndex: r,
-    deleteActiveFeatureFlag: o
+    deleteActiveFeatureFlag: r
   };
 });
 class Rn {

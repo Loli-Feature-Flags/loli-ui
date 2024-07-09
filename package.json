@@ -1,6 +1,6 @@
 {
   "name": "@loli-feature-flags/loli-ui",
-  "version": "1.0.0-alpha.8",
+  "version": "1.0.0-alpha.9",
   "keywords": [
     "featureflags",
     "flags",
@@ -53,7 +53,7 @@
   },
   "dependencies": {
     "@internationalized/date": "^3.5.4",
-    "@loli-feature-flags/loli-sdk": "1.0.0-alpha.0",
+    "@loli-feature-flags/loli-sdk": "1.0.0-alpha.2",
     "@paralleldrive/cuid2": "^2.2.2",
     "pinia": "^2.1.7",
     "radix-vue": "^1.8.5",
