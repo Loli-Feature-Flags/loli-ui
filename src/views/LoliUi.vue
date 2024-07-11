@@ -38,7 +38,14 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div class="loli-ui bg-white relative text-gray-900 rounded-md" ref="loliUiRef">
+  <div
+    :class="[
+      'loli-ui relative rounded-md',
+      'bg-white text-gray-900',
+      'dark:bg-gray-900 dark:text-gray-200'
+    ]"
+    ref="loliUiRef"
+  >
     <AnimateChangingContentHeight>
       <div class="py-4 px-8">
         <Transition name="view-fade" :duration="300">
