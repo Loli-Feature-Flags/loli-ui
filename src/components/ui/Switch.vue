@@ -21,13 +21,16 @@ const thumbSizeClasses: { [key in SwitchSize]: string } = {
   <SwitchRoot
     v-model:checked="checkedModel"
     :class="[
-      'flex bg-gray-300 shadow-sm relative data-[state=checked]:bg-green-600 cursor-pointer transition',
+      'flex shadow-sm relative cursor-pointer transition',
+      'bg-gray-300 data-[state=checked]:bg-green-600',
+      'dark:bg-gray-600',
       rootSizeClasses[size ?? 'normal']
     ]"
   >
     <SwitchThumb
       :class="[
-        'bg-white shadow-sm absolute top-1/2 -translate-y-1/2 left-0 transition will-change',
+        'shadow-sm absolute top-1/2 -translate-y-1/2 left-0 transition will-change',
+        'bg-white',
         thumbSizeClasses[size ?? 'normal']
       ]"
     />
