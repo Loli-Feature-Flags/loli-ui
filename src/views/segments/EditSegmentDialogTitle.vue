@@ -57,7 +57,7 @@ function cancelEditName() {
 
 <template>
   <DefaultDialogTitle class="justify-between">
-    <div class="text-primary-700 flex flex-row items-center gap-10">
+    <div class="flex flex-row items-center gap-10 text-primary-700 dark:text-gray-300">
       <RectangleGroupIcon />
 
       <span v-if="!editNameActive" class="flex flex-row items-center gap-3">
