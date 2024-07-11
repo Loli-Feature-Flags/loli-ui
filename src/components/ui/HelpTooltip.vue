@@ -34,7 +34,7 @@ const variantClasses: { [key in HelpTooltipVariant]: string } = {
 }
 
 const arrowVariantClasses: { [key in HelpTooltipVariant]: string } = {
-  normal: 'fill-gray-800',
+  normal: 'fill-gray-800 dark:fill-gray-500',
   error: 'fill-red-600'
 }
 </script>
