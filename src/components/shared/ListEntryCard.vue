@@ -16,7 +16,7 @@ defineEmits(['click'])
       {
         'border-gray-200 bg-gray-50/50 hover:bg-gray-50 active:bg-gray-100 dark:bg-gray-800/50 dark:border-gray-700 dark:hover:bg-gray-800/80 dark:active:bg-gray-800/20':
           !issuesCarryOn || issuesCarryOn.isValid(),
-        'border-red-600 bg-red-50/30 hover:bg-red-50/80 dark:border-red-500 dark:bg-red-800/10':
+        'border-red-600 bg-red-50/30 hover:bg-red-50/80 dark:border-red-500 dark:bg-red-800/10 dark:hover:bg-red-800/20':
           issuesCarryOn && issuesCarryOn.isInvalid()
       }
     ]"

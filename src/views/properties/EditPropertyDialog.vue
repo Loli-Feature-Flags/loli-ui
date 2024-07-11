@@ -146,7 +146,7 @@ function deleteProperty() {
       </Label>
 
       <Label :title="$t('views.properties.editDialog.path.label')">
-        <div class="grid grid-cols-[1fr,auto] items-center gap-4">
+        <div class="flex flex-row items-center gap-4">
           <Input
             v-model="path"
             :placeholder="$t('views.properties.editDialog.path.placeholder')"
