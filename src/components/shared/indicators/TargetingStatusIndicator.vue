@@ -11,8 +11,11 @@ const sharedIconClasses = 'icon-no-default size-5 cursor-help'
   <HelpTooltip>
     <template #trigger>
       <span>
-        <SignalIcon v-if="active" :class="[sharedIconClasses, 'text-green-700']" />
-        <SignalSlashIcon v-else :class="[sharedIconClasses, 'text-red-600']" />
+        <SignalIcon
+          v-if="active"
+          :class="[sharedIconClasses, 'text-green-700 dark:text-green-500']"
+        />
+        <SignalSlashIcon v-else :class="[sharedIconClasses, 'text-red-600 dark:text-red-500']" />
       </span>
     </template>
 

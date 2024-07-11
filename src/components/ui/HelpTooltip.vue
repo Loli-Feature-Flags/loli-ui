@@ -29,7 +29,7 @@ defineProps<{
 }>()
 
 const variantClasses: { [key in HelpTooltipVariant]: string } = {
-  normal: 'bg-gray-800 text-white',
+  normal: 'bg-gray-800 text-white dark:border dark:border-gray-500',
   error: 'bg-red-600 text-white'
 }
 

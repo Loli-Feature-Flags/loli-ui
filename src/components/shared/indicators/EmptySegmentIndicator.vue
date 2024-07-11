@@ -6,7 +6,9 @@ import HelpTooltip from '../../ui/HelpTooltip.vue'
 <template>
   <HelpTooltip>
     <template #trigger>
-      <ExclamationTriangleIcon class="text-red-700 cursor-help icon-no-default size-5" />
+      <ExclamationTriangleIcon
+        class="text-red-700 dark:text-red-500 cursor-help icon-no-default size-5"
+      />
     </template>
 
     {{ $t('shared.emptySegmentIndicator') }}

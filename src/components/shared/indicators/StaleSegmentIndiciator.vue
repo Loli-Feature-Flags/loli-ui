@@ -6,7 +6,9 @@ import HelpTooltip from '../../ui/HelpTooltip.vue'
 <template>
   <HelpTooltip>
     <template #trigger>
-      <ExclamationCircleIcon class="text-orange-700 cursor-help icon-no-default size-5" />
+      <ExclamationCircleIcon
+        class="text-orange-700 dark:text-orange-500 cursor-help icon-no-default size-5"
+      />
     </template>
 
     {{ $t('shared.staleSegmentIndicator') }}
