@@ -58,7 +58,7 @@ const loliUiRef = useLoliUiElementRef()
             },
             'px-6 pt-6 pb-8 border shadow-2xl',
             'bg-white border-gray-300',
-            'dark:bg-gray-900 dark:border-gray-500 dark:shadow-lg dark:shadow-gray-800',
+            'dark:bg-gray-900 dark:border-gray-300 dark:shadow-lg dark:shadow-gray-800',
             {
               'ring-2 ring-offset-4 ring-red-600 dark:ring-red-500 dark:ring-offset-gray-900': error
             },
