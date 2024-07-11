@@ -50,7 +50,7 @@ const arrowVariantClasses: { [key in HelpTooltipVariant]: string } = {
         }
       "
     >
-      <TooltipTrigger as-child>
+      <TooltipTrigger as-child tabindex="0">
         <slot name="trigger" />
       </TooltipTrigger>
 
