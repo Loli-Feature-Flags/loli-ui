@@ -62,9 +62,11 @@ const loliUiRef = useLoliUiElementRef()
       :aria-label="ariaLabel"
       :class="[
         'flex justify-between items-center',
-        'transition relative focus-ring',
-        'bg-white border border-gray-300 hover:bg-gray-50',
-        'disabled:bg-gray-100 disabled:border-gray-100 disabled:text-gray-500 disabled:cursor-not-allowed disabled:hover:bg-gray-100',
+        'transition relative focus-ring border disabled:cursor-not-allowed',
+        'bg-white border-gray-300 hover:bg-gray-50',
+        'dark:bg-gray-900 dark:border-gray-300 dark:hover:bg-gray-800',
+        'disabled:bg-gray-100 disabled:border-gray-100 disabled:text-gray-500 disabled:hover:bg-gray-100',
+        'dark:disabled:bg-gray-800 dark:disabled:border-gray-600 dark:disabled:text-gray-500 dark:disabled:hover:bg-gray-800',
         'data-[placeholder]:text-gray-400 data-[placeholder]:font-extralight',
         { ' w-full': !fit },
         sizeClasses[size ?? 'normal']
@@ -81,11 +83,19 @@ const loliUiRef = useLoliUiElementRef()
           :align="align ?? 'start'"
           :side="side ?? 'bottom'"
           :side-offset="offset ?? 8"
-          class="bg-white min-w-[15em] p-2 shadow-2xl border border-gray-300 rounded-md z-100 max-h-[17em] relative overflow-hidden"
+          :class="[
+            'min-w-[15em] p-2 shadow-2xl border rounded-md z-100 max-h-[17em] relative overflow-hidden',
+            'bg-white border-gray-300',
+            'dark:bg-gray-900 dark:border-gray-400'
+          ]"
           :style="config.getFloatingZIndexStyle()"
         >
           <SelectScrollUpButton
-            class="flex flex-row justify-center absolute top-0 left-0 w-full border-b border-gray-300 bg-white py-0.5 z-10"
+            :class="[
+              'flex flex-row justify-center absolute top-0 left-0 w-full border-b py-0.5 z-10',
+              'border-gray-300 bg-white',
+              'border-gray-400 bg-gray-900'
+            ]"
           >
             <ChevronUpIcon />
           </SelectScrollUpButton>
@@ -96,8 +106,9 @@ const loliUiRef = useLoliUiElementRef()
               :value="option.value"
               :key="option.value"
               :class="[
-                'transition flex flex-row justify-between w-full items-center cursor-pointer ',
-                'hover:bg-gray-100 focus:bg-gray-100 focus:outline-none',
+                'transition flex flex-row justify-between w-full items-center cursor-pointer focus:outline-none',
+                'hover:bg-gray-100 focus:bg-gray-100',
+                'dark:hover:bg-gray-700 focus:bg-gray-700',
                 itemSizeClasses[size ?? 'normal']
               ]"
             >
@@ -107,7 +118,11 @@ const loliUiRef = useLoliUiElementRef()
           </SelectViewport>
 
           <SelectScrollDownButton
-            class="flex flex-row justify-center absolute bottom-0 left-0 w-full border-t border-gray-300 bg-white py-0.5 z-10"
+            :class="[
+              'flex flex-row justify-center absolute bottom-0 left-0 w-full border-t py-0.5 z-10',
+              'border-gray-300 bg-white',
+              'border-gray-400 bg-gray-900'
+            ]"
           >
             <ChevronDownIcon />
           </SelectScrollDownButton>

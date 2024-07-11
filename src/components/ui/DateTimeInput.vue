@@ -37,7 +37,9 @@ const sizeClasses: { [key in DateTimeInputSize]: string } = {
     :class="[
       'select-none flex items-center gap-0.5',
       'transition relative',
-      'bg-white border border-gray-300 focus-ring text-gray-700',
+      'border focus-ring',
+      'bg-white border-gray-300 text-gray-700',
+      'dark:bg-gray-900 dark:border-gray-300 dark:text-gray-300',
       { 'w-full': !fit },
       sizeClasses[size ?? 'normal']
     ]"
@@ -50,7 +52,11 @@ const sizeClasses: { [key in DateTimeInputSize]: string } = {
       <DateFieldInput
         v-else
         :part="item.part"
-        class="rounded focus:outline-none focus:ring-offset-2 focus:ring-1 focus:ring-primary-500 data-[placeholder]:text-gray-400 data-[placeholder]:font-extralight"
+        :class="[
+          'rounded focus:outline-none focus:ring-offset-2 focus:ring-1 data-[placeholder]:font-extralight',
+          'focus:ring-primary-500 data-[placeholder]:text-gray-400',
+          'dark:focus:ring-primary-400 dark:ring-offset-gray-900 dark:focus:ring-2'
+        ]"
       >
         {{ item.value }}
       </DateFieldInput>

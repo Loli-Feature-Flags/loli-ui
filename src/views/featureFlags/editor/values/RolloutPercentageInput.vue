@@ -6,7 +6,9 @@ const model = defineModel<number>({ required: true })
 </script>
 
 <template>
-  <div class="flex flex-row items-center justify-start gap-4 text-sm text-gray-800">
+  <div
+    class="flex flex-row items-center justify-start gap-4 text-sm text-gray-800 dark:text-gray-300"
+  >
     <span>
       {{ $t('views.featureFlags.editor.targeting.rules.values.rolloutPercentage.prefix') }}
     </span>

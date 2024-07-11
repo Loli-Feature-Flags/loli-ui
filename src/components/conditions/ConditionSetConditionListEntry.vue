@@ -27,8 +27,14 @@ const { ringClasses, hoverBorderColor, hoverRingColor } = useConditionSetNestedC
 <template>
   <div>
     <div
-      class="transition flex flex-row items-stretch gap-2 border border-gray-300 rounded-md bg-white min-w-[50rem] overflow-x-auto"
-      :class="[ringClasses, hoverBorderColor, hoverRingColor]"
+      :class="[
+        'transition flex flex-row items-stretch gap-2 border rounded-md min-w-[50rem] overflow-x-auto',
+        'bg-white border-gray-300',
+        'dark:bg-gray-900 dark:border-gray-300',
+        ringClasses,
+        hoverBorderColor,
+        hoverRingColor
+      ]"
     >
       <div class="flex-grow flex flex-row items-center p-4">
         <PropertyConditionRow

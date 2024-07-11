@@ -29,12 +29,12 @@ defineProps<{
 }>()
 
 const variantClasses: { [key in HelpTooltipVariant]: string } = {
-  normal: 'bg-gray-800 text-white',
+  normal: 'bg-gray-800 text-white dark:border dark:border-gray-500',
   error: 'bg-red-600 text-white'
 }
 
 const arrowVariantClasses: { [key in HelpTooltipVariant]: string } = {
-  normal: 'fill-gray-800',
+  normal: 'fill-gray-800 dark:fill-gray-500',
   error: 'fill-red-600'
 }
 </script>
@@ -50,7 +50,7 @@ const arrowVariantClasses: { [key in HelpTooltipVariant]: string } = {
         }
       "
     >
-      <TooltipTrigger as-child>
+      <TooltipTrigger as-child tabindex="0">
         <slot name="trigger" />
       </TooltipTrigger>
 

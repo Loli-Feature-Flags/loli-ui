@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{vue,scss,ts}'],
+  darkMode: ['selector', '[data-loli-appearance="dark"]'],
   theme: {
     fontFamily: {
       sans: ['Loli Noto Sans Variable', 'sans-serif'],

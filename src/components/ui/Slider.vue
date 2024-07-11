@@ -30,12 +30,12 @@ const grabbing = ref(false)
     <SliderTrack
       :class="['bg-gray-300 relative grow rounded-full h-[2px]', { 'cursor-grabbing': grabbing }]"
     >
-      <SliderRange class="absolute bg-primary-500 rounded-full h-full" />
+      <SliderRange class="absolute bg-primary-500 dark:bg-primary-400 rounded-full h-full" />
     </SliderTrack>
 
     <SliderThumb
       :class="[
-        'transition block size-4 bg-white border-2 border-primary-500 rounded-full focus-ring',
+        'transition block size-4 bg-white border-2 border-primary-500 dark:border-primary-400 rounded-full focus-ring',
         { 'cursor-grab': !grabbing, 'cursor-grabbing': grabbing }
       ]"
       :aria-label="thumbLabel"

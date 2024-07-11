@@ -18,23 +18,19 @@ defineEmits(['edit'])
 
 <template>
   <ListEntryCard @click="$emit('edit')" :issues-carry-on="issuesCarryOn">
-    <div class="flex flex-row items-center justify-between flex-wrap gap-4 mb-2">
-      <span class="text-lg font-mono text-primary-700 flex flex-row items-center gap-4">
-        <ToggleIcon />{{ featureFlag.name }}
-      </span>
+    <template #title-start> <ToggleIcon />{{ featureFlag.name }} </template>
 
-      <div class="flex flex-row gap-4 items-center">
-        <StaleFeatureFlagIndicator v-if="isFeatureFlagStale(featureFlag)" />
-        <TargetingStatusIndicator :active="featureFlag.targeting.enabled" />
-        <FeatureFlagTypeBadge :type="featureFlag.type" />
-      </div>
-    </div>
+    <template #title-end>
+      <StaleFeatureFlagIndicator v-if="isFeatureFlagStale(featureFlag)" />
+      <TargetingStatusIndicator :active="featureFlag.targeting.enabled" />
+      <FeatureFlagTypeBadge :type="featureFlag.type" />
+    </template>
 
-    <div class="flex flex-col gap-0.5 items-start">
-      <span class="text-xs text-gray-400">
+    <template #bottom>
+      <span>
         {{ $t('views.featureFlags.entries.fallbackPrefix') }}:
         {{ i18nFeatureFlagDefaultValue(featureFlag) }}
       </span>
-    </div>
+    </template>
   </ListEntryCard>
 </template>

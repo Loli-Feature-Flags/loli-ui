@@ -22,18 +22,14 @@ defineEmits(['edit'])
 
 <template>
   <ListEntryCard @click="$emit('edit')" :issues-carry-on="issuesCarryOn">
-    <div class="flex flex-row items-center justify-between flex-wrap gap-4">
-      <span class="text-lg font-mono text-primary-700 flex flex-row items-center gap-4">
-        <RectangleGroupIcon />{{ segment.name }}
-      </span>
+    <template #title-start> <RectangleGroupIcon />{{ segment.name }} </template>
 
-      <div class="flex flex-row gap-4 items-center">
-        <StaleSegmentIndiciator v-if="!isSegmentReferenced(segment.id, workbench.spec)" />
+    <template #title-end>
+      <StaleSegmentIndiciator v-if="!isSegmentReferenced(segment.id, workbench.spec)" />
 
-        <EmptySegmentIndicator v-if="isSegmentEmpty(segment)" />
+      <EmptySegmentIndicator v-if="isSegmentEmpty(segment)" />
 
-        <ReferencesIndicator :references="countSegmentReferences(segment.id, workbench.spec)" />
-      </div>
-    </div>
+      <ReferencesIndicator :references="countSegmentReferences(segment.id, workbench.spec)" />
+    </template>
   </ListEntryCard>
 </template>

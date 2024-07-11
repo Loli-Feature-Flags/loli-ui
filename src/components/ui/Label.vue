@@ -8,7 +8,7 @@ const labelPositionClasses: { [key in LabelPosition]: string } = {
 }
 
 const titlePositionClasses: { [key in LabelPosition]: string } = {
-  top: 'text-gray-500 text-xs font-light ',
+  top: 'text-gray-500 dark:text-gray-400 text-xs font-light ',
   right: ''
 }
 </script>

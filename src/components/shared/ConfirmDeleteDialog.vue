@@ -29,7 +29,7 @@ function deleteProperty() {
       <slot name="trigger" />
     </template>
 
-    <p class="mt-6 text-gray-500">{{ description }}</p>
+    <p class="mt-6 text-gray-500 dark:text-gray-400">{{ description }}</p>
 
     <div class="mt-8 grid grid-cols-2 gap-4">
       <Button @click="opened = false" class="flex-grow">

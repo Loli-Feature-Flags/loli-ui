@@ -96,10 +96,14 @@ function save() {
 
 <template>
   <LoliView :title="$t('views.jsonEditor.title')" class="json-editor">
-    <div v-if="currentErrorTitle" class="text-red-600 mb-4">{{ currentErrorTitle }}</div>
+    <div v-if="currentErrorTitle" class="text-red-500 mb-4">{{ currentErrorTitle }}</div>
 
     <textarea
-      class="p-4 rounded-md bg-white border border-gray-300 w-full min-h-[35em] font-mono text-xs focus-ring transition resize-y"
+      :class="[
+        'p-4 rounded-md border w-full min-h-[35em] font-mono text-xs focus-ring transition resize-y',
+        'border-gray-300 bg-white',
+        'dark:border-gray-400 dark:bg-gray-900'
+      ]"
       v-model="editorJson"
       spellcheck="false"
     />
@@ -112,7 +116,7 @@ function save() {
       <Button :disabled="!canSave" @click="save">{{ $t('views.jsonEditor.save') }}</Button>
     </div>
 
-    <div class="text-red-600 mt-4" v-if="currentErrorDetails.length > 0">
+    <div class="text-red-500 mt-4" v-if="currentErrorDetails.length > 0">
       <div class="text-2xl">
         {{ $t('views.jsonEditor.errorDetails.title') }}
       </div>

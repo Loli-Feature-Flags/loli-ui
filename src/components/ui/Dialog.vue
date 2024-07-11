@@ -39,7 +39,7 @@ const loliUiRef = useLoliUiElementRef()
     <DialogPortal :to="loliUiRef">
       <Transition name="fade">
         <DialogOverlay
-          class="bg-gray-700/50 w-full h-full fixed top-0 left-0"
+          class="w-full h-full fixed top-0 left-0 bg-gray-950/70"
           :style="config.getFloatingZIndexStyle()"
         />
       </Transition>
@@ -56,9 +56,11 @@ const loliUiRef = useLoliUiElementRef()
                 size === 'near-fullscreen',
               'w-screen h-screen': size === 'fullscreen'
             },
-            'bg-white px-6 pt-6 pb-8 shadow-2xl border border-gray-300',
+            'px-6 pt-6 pb-8 border shadow-2xl',
+            'bg-white border-gray-300',
+            'dark:bg-gray-900 dark:border-gray-300 dark:shadow-lg dark:shadow-gray-800',
             {
-              'ring-2 ring-offset-4 ring-red-600': error
+              'ring-2 ring-offset-4 ring-red-600 dark:ring-red-500 dark:ring-offset-gray-900': error
             },
             'data-[state=open]:animate-contentShow focus:outline-none',
             'overflow-x-auto',
@@ -82,7 +84,11 @@ const loliUiRef = useLoliUiElementRef()
 
             <DialogClose
               :title="$t('common.dialog.close')"
-              class="transition p-1.5 rounded-md focus-ring border border-transparent hover:bg-gray-100 hover:border-gray-200"
+              :class="[
+                'transition p-1.5 rounded-md focus-ring border',
+                'border-transparent hover:bg-gray-100 hover:border-gray-200',
+                'dark:border-transparent dark:hover:bg-gray-800 dark:hover:border-gray-600'
+              ]"
             >
               <XMarkIcon />
             </DialogClose>
