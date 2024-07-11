@@ -39,7 +39,7 @@ const loliUiRef = useLoliUiElementRef()
     <DialogPortal :to="loliUiRef">
       <Transition name="fade">
         <DialogOverlay
-          class="w-full h-full fixed top-0 left-0 bg-gray-900/70"
+          class="w-full h-full fixed top-0 left-0 bg-gray-950/70"
           :style="config.getFloatingZIndexStyle()"
         />
       </Transition>
