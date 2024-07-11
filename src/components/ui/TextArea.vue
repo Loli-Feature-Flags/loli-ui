@@ -32,7 +32,9 @@ watchEffect(() => {
 
 const classes = computed(() => [
   'transition w-full relative',
-  'bg-white border border-gray-300 focus-ring text-gray-700',
+  'border focus-ring',
+  'bg-white border-gray-300 text-gray-700',
+  'dark:bg-gray-900 dark:border-gray-300 dark:text-gray-300',
   'placeholder:text-gray-400 placeholder:font-extralight',
   sizeClasses[props.size ?? 'normal']
 ])
