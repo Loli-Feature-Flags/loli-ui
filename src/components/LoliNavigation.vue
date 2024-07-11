@@ -25,7 +25,7 @@ watchEffect(() => {
 </script>
 
 <template>
-  <nav class="navigation border-b border-gray-200 flex items-stretch gap-6">
+  <nav class="navigation border-b flex items-stretch gap-6 border-gray-600">
     <LoliLogo class="size-12 py-3" :title="$t('navigation.logo')" />
 
     <div class="navigation__buttons flex items-stretch gap-4">
