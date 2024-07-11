@@ -16,7 +16,7 @@ defineEmits(['click'])
 const variantClasses: { [key in ButtonVariant]: string | string[] } = {
   default: [
     'bg-white border-gray-300 text-gray-700 hover:text-gray-900 hover:bg-gray-50 active:bg-gray-100',
-    'dark:bg-gray-900 dark:border-gray-200 dark:text-gray-200 dark:hover:text-gray-200 dark:hover:bg-gray-700 dark:active:bg-gray-800',
+    'dark:bg-gray-900 dark:border-gray-300 dark:text-gray-300 dark:hover:text-gray-300 dark:hover:bg-gray-700 dark:active:bg-gray-800',
     'disabled:bg-gray-100 disabled:border-gray-100 disabled:text-gray-400 disabled:hover:text-gray-400 disabled:hover:bg-gray-100 disabled:active:bg-gray-100',
     'dark:disabled:bg-gray-900 dark:disabled:border-gray-500 dark:disabled:text-gray-500 dark:disabled:hover:text-gray-500 dark:disabled:hover:bg-gray-900 dark:disabled:active:bg-gray-900'
   ],

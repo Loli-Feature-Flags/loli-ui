@@ -78,7 +78,7 @@ function resetNumberValueOnBlurIfEmpty() {
           'transition relative',
           'border focus-ring',
           'bg-white border-gray-300 text-gray-700',
-          'dark:bg-gray-900 dark:border-gray-200 dark:text-gray-300',
+          'dark:bg-gray-900 dark:border-gray-300 dark:text-gray-300',
           'placeholder:text-gray-400 placeholder:font-extralight',
           { 'w-full': !fit },
           sizeClasses[size ?? 'normal']
