@@ -18,3 +18,5 @@ export type HideableView = NavigationState['view'] | 'initializeSpec'
 export type SpecIssueType = 'malformed-json' | 'invalid-schema' | 'semantic-issue'
 
 export type SpecIssueListener = (type: SpecIssueType) => void
+
+export type LoliUiAppearance = 'system' | 'light' | 'dark'

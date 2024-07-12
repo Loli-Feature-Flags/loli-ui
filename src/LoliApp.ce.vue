@@ -18,11 +18,46 @@
  */
 
 import LoliUi from './views/LoliUi.vue'
+import { computed, onMounted, ref } from 'vue'
+import { useConfig } from './stores/config/store'
+
+const config = useConfig()
+
+const prefersDarkMode = ref(false)
+
+const isDarkModeEnabled = computed(() => {
+  switch (config.appearance) {
+    case 'system':
+      return prefersDarkMode.value
+    case 'dark':
+      return true
+    default:
+      return false
+  }
+})
+
+function updatePrefersDarkMode(e: any) {
+  prefersDarkMode.value = e.matches
+}
+
+onMounted(() => {
+  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+
+  prefersDarkMode.value = mediaQuery.matches
+
+  mediaQuery.addEventListener('change', updatePrefersDarkMode)
+
+  return () => {
+    mediaQuery.removeEventListener('change', updatePrefersDarkMode)
+  }
+})
 </script>
 
 <template>
   <div class="loli-ui-styles-scoped">
-    <LoliUi />
+    <div :data-loli-appearance="isDarkModeEnabled ? 'dark' : undefined">
+      <LoliUi />
+    </div>
   </div>
 </template>
 

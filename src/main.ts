@@ -8,6 +8,8 @@ import { initializeStyles } from './main/styles'
 import { mountApp } from './main/mount'
 import { useWorkbench } from './stores/workbench/store'
 import { useNavigation } from './stores/navigation/store'
+import type { LoliUiAppearance } from './stores/config/types'
+import { useConfig } from './stores/config/store'
 
 /**
  * Initializes and mounts an instance of Loli UI
@@ -49,6 +51,9 @@ export function mountLoliUi(
       } else {
         useNavigation().reset('external')
       }
+    },
+    updateAppearance(newAppearance: LoliUiAppearance): void {
+      useConfig().setAppearance(newAppearance)
     }
   }
 }

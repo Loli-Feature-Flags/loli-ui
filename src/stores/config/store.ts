@@ -4,6 +4,7 @@ import { ref } from 'vue'
 import type { LoliSpec } from '@loli-feature-flags/loli-sdk'
 import type {
   HideableView,
+  LoliUiAppearance,
   NavigationStateChangeListener,
   NavigationStateChangeSource,
   NavigationStateChangeType,
@@ -19,6 +20,7 @@ export const useConfig = defineStore('config', () => {
   const specIssueListeners = ref<Set<SpecIssueListener>>(new Set())
   const hiddenViews = ref<HideableView[]>([])
   const floatingZIndex = ref<number>(2000)
+  const appearance = ref<LoliUiAppearance>('system')
 
   // Spec change listener related functions
   function unregisterSpecChangeListener(specChangeListener: SpecChangeListener) {
@@ -102,6 +104,10 @@ export const useConfig = defineStore('config', () => {
     return `z-index: ${floatingZIndex.value};`
   }
 
+  function setAppearance(newAppearance: LoliUiAppearance) {
+    appearance.value = newAppearance
+  }
+
   return {
     registerSpecChangeListener,
     unregisterSpecChangeListener,
@@ -117,6 +123,8 @@ export const useConfig = defineStore('config', () => {
     isViewVisible,
     floatingZIndex,
     setFloatingZIndex,
-    getFloatingZIndexStyle
+    getFloatingZIndexStyle,
+    appearance,
+    setAppearance
   }
 })
