@@ -17,6 +17,7 @@
 
 .dnd-ghost {
   @apply bg-gray-100 rounded-md;
+  @apply dark:bg-gray-700;
 
   & * {
     opacity: 0;

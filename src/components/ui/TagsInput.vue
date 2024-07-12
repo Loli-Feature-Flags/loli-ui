@@ -48,7 +48,9 @@ const inputSizeClasses: { [key in TagsInputSize]: string } = {
     v-model="valuesModel"
     :class="[
       'flex flex-row flex-wrap gap-2 items-center',
-      'bg-white border border-gray-300 focus-ring',
+      'border focus-ring',
+      'bg-white border-gray-300',
+      'dark:bg-gray-900 dark:border-gray-300',
       rootSizeClasses[size ?? 'normal'],
       { 'w-full': !fit }
     ]"
@@ -58,7 +60,9 @@ const inputSizeClasses: { [key in TagsInputSize]: string } = {
       :key="value"
       :value="value"
       :class="[
-        'flex items-center justify-center bg-gray-100 aria-[current=true]:bg-primary-100',
+        'flex items-center justify-center border',
+        'bg-gray-100 border-gray-200 aria-[current=true]:bg-primary-100',
+        'dark:bg-gray-700 dark:border-gray-700 dark:aria-[current=true]:bg-primary-600',
         itemSizeClasses[size ?? 'normal']
       ]"
     >
@@ -72,7 +76,9 @@ const inputSizeClasses: { [key in TagsInputSize]: string } = {
     <TagsInputInput
       :placeholder="placeholder"
       :class="[
-        'focus:outline-none flex-1 placeholder:text-gray-400',
+        'focus:outline-none flex-1',
+        'bg-white placeholder:text-gray-400',
+        'dark:bg-gray-900 placeholder:text-gray-400 dark:placeholder:font-extralight',
         inputSizeClasses[size ?? 'normal']
       ]"
     />
