@@ -7,15 +7,15 @@ export default function useConditionSetNestedColoring(skipIncrement?: boolean) {
   provide(nestedLevelKey, nestedLevel + (skipIncrement ? 0 : 1))
 
   const hoverBorderColorsLevels = [
-    'hover:border-primary-500',
-    'hover:border-cerulean-500',
-    'hover:border-zest-500'
+    'hover:border-primary-500 dark:hover:border-primary-300',
+    'hover:border-cerulean-500 dark:hover:border-cerulean-300',
+    'hover:border-zest-500 dark:hover:border-zest-300'
   ]
 
   const hoverRingColorsLevels = [
-    'hover:ring-primary-200',
-    'hover:ring-cerulean-200',
-    'hover:ring-zest-200'
+    'hover:ring-primary-200 dark:hover:ring-primary-600 dark:ring-offset-gray-900',
+    'hover:ring-cerulean-200 dark:hover:ring-cerulean-600 dark:ring-offset-gray-900',
+    'hover:ring-zest-200 dark:hover:ring-zest-600 dark:ring-offset-gray-900'
   ]
 
   const hoverBorderColor = hoverBorderColorsLevels[nestedLevel % hoverBorderColorsLevels.length]

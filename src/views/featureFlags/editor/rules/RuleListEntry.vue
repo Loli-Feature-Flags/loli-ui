@@ -31,7 +31,9 @@ const enabled = computed({
 <template>
   <div
     :class="[
-      'transition rounded-md border border-gray-300 p-4 bg-white',
+      'transition rounded-md border p-4',
+      'bg-white border-gray-300',
+      'dark:bg-gray-900 dark:border-gray-300',
       { 'opacity-50': !enabled },
       ringClasses,
       hoverBorderColor,
