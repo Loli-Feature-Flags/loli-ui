@@ -17,6 +17,19 @@ defineProps<{
   fit?: boolean
 }>()
 
+function handleBlur(event: Event) {
+  if (event.target) {
+    const input = event.target as HTMLInputElement
+    const text = input.value
+
+    if (text.trim().length > 0) {
+      valuesModel.value.push(text)
+    }
+
+    input.value = ''
+  }
+}
+
 const rootSizeClasses: { [key in TagsInputSize]: string } = {
   small: 'rounded-md p-1 gap-1',
   normal: 'rounded-md p-2 gap-2'
@@ -81,6 +94,7 @@ const inputSizeClasses: { [key in TagsInputSize]: string } = {
         'dark:bg-gray-900 placeholder:text-gray-400 dark:placeholder:font-extralight',
         inputSizeClasses[size ?? 'normal']
       ]"
+      @blur="handleBlur"
     />
   </TagsInputRoot>
 </template>

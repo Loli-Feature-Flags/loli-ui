@@ -94,7 +94,7 @@ const loliUiRef = useLoliUiElementRef()
             :class="[
               'flex flex-row justify-center absolute top-0 left-0 w-full border-b py-0.5 z-10',
               'border-gray-300 bg-white',
-              'border-gray-400 bg-gray-900'
+              'dark:border-gray-400 dark:bg-gray-900'
             ]"
           >
             <ChevronUpIcon />
@@ -108,7 +108,7 @@ const loliUiRef = useLoliUiElementRef()
               :class="[
                 'transition flex flex-row justify-between w-full items-center cursor-pointer focus:outline-none',
                 'hover:bg-gray-100 focus:bg-gray-100',
-                'dark:hover:bg-gray-700 focus:bg-gray-700',
+                'dark:hover:bg-gray-700 dark:focus:bg-gray-700',
                 itemSizeClasses[size ?? 'normal']
               ]"
             >
@@ -121,7 +121,7 @@ const loliUiRef = useLoliUiElementRef()
             :class="[
               'flex flex-row justify-center absolute bottom-0 left-0 w-full border-t py-0.5 z-10',
               'border-gray-300 bg-white',
-              'border-gray-400 bg-gray-900'
+              'dark:border-gray-400 dark:bg-gray-900'
             ]"
           >
             <ChevronDownIcon />
