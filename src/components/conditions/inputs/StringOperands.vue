@@ -2,6 +2,10 @@
 import TagsInput from '../../ui/TagsInput.vue'
 
 const operandsModel = defineModel<string[]>({ required: true })
+
+defineProps<{
+  validator?: (value: string) => true | string
+}>()
 </script>
 
 <template>
@@ -10,5 +14,6 @@ const operandsModel = defineModel<string[]>({ required: true })
     :placeholder="$t('conditions.operands.string.addPlaceholder')"
     size="small"
     fit
+    :validator="validator"
   />
 </template>

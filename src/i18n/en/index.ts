@@ -199,6 +199,13 @@ export default {
         operandOffset: 'global time',
         localOffset: 'local time'
       }
+    },
+    operands: {
+      string: {
+        validation: {
+          invalidRegex: 'This is not a valid regular expression. Details:\n{details}'
+        }
+      }
     }
   },
   conditions: {

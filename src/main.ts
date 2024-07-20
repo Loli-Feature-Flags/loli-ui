@@ -11,6 +11,8 @@ import { useNavigation } from './stores/navigation/store'
 import type { LoliUiAppearance } from './stores/config/types'
 import { useConfig } from './stores/config/store'
 
+export * from './main/types'
+
 /**
  * Initializes and mounts an instance of Loli UI
  * in the given container and with the given options.

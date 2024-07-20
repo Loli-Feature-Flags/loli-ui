@@ -7,6 +7,7 @@ import { computed } from 'vue'
 import StringOperands from '../../inputs/StringOperands.vue'
 import QuantifierSelector from '../../inputs/QuantifierSelector.vue'
 import StringArrayConditionOperatorSelect from '../../inputs/StringArrayConditionOperatorSelect.vue'
+import useStringOperandValidator from '../../../../hooks/useRegexOperandValidator'
 
 const conditionModel = defineModel<StringArrayCondition>({ required: true })
 
@@ -20,6 +21,8 @@ const operatorsToHideQuantifiersFor: StringArrayConditionOperator[] = [
 const hideOperandsAndQuantifiers = computed(() =>
   operatorsToHideQuantifiersFor.includes(conditionModel.value.operator)
 )
+
+const validator = useStringOperandValidator(conditionModel)
 </script>
 
 <template>
@@ -32,5 +35,5 @@ const hideOperandsAndQuantifiers = computed(() =>
   <QuantifierSelector v-else v-model="conditionModel.operandsQuantifier" />
 
   <div v-if="hideOperandsAndQuantifiers" />
-  <StringOperands v-else v-model="conditionModel.operands" />
+  <StringOperands v-else v-model="conditionModel.operands" :validator="validator" />
 </template>

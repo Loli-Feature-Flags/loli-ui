@@ -4,6 +4,7 @@ import { computed } from 'vue'
 import StringOperands from '../../inputs/StringOperands.vue'
 import QuantifierSelector from '../../inputs/QuantifierSelector.vue'
 import StringConditionOperatorSelect from '../../inputs/StringConditionOperatorSelect.vue'
+import useStringOperandValidator from '../../../../hooks/useRegexOperandValidator'
 
 const conditionModel = defineModel<StringCondition>({ required: true })
 
@@ -12,6 +13,8 @@ const operatorsToHideQuantifiersFor: StringConditionOperator[] = ['isBlank', 'is
 const hideOperandsAndQuantifiers = computed(() =>
   operatorsToHideQuantifiersFor.includes(conditionModel.value.operator)
 )
+
+const validator = useStringOperandValidator(conditionModel)
 </script>
 
 <template>
@@ -23,5 +26,5 @@ const hideOperandsAndQuantifiers = computed(() =>
   <QuantifierSelector v-else v-model="conditionModel.operandsQuantifier" />
 
   <div v-if="hideOperandsAndQuantifiers" />
-  <StringOperands v-else v-model="conditionModel.operands" />
+  <StringOperands v-else v-model="conditionModel.operands" :validator="validator" />
 </template>
