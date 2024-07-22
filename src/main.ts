@@ -1,4 +1,4 @@
-import type { LoliUiMountOptions, LoliUiMountResult } from './main/types'
+import type { LoliUiInterface, LoliUiMountOptions } from './main/types'
 import { initializeFonts } from './main/fonts'
 import { initializeApp } from './main/app'
 import { initializePlugins } from './main/plugins'
@@ -12,6 +12,14 @@ import type { LoliUiAppearance } from './stores/config/types'
 import { useConfig } from './stores/config/store'
 
 export * from './main/types'
+export { type NavigationState } from './stores/navigation/NavigationState'
+export type {
+  LoliUiAppearance,
+  HideableView,
+  NavigationStateChangeListener,
+  SpecChangeListener,
+  SpecIssueListener
+} from './stores/config/types'
 
 /**
  * Initializes and mounts an instance of Loli UI
@@ -20,10 +28,7 @@ export * from './main/types'
  * @param container Container element to add Loli UI to.
  * @param options Optional options.
  */
-export function mountLoliUi(
-  container: HTMLElement,
-  options?: LoliUiMountOptions
-): LoliUiMountResult {
+export function mountLoliUi(container: HTMLElement, options?: LoliUiMountOptions): LoliUiInterface {
   const removeFonts = initializeFonts()
 
   const app = initializeApp()

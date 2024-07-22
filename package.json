@@ -1,6 +1,6 @@
 {
   "name": "@loli-feature-flags/loli-ui",
-  "version": "1.0.0-alpha.12",
+  "version": "1.0.0-alpha.14",
   "keywords": [
     "featureflags",
     "flags",
@@ -17,6 +17,7 @@
     "type": "git",
     "url": "https://github.com/Loli-Feature-Flags/loli-ui"
   },
+  "homepage": "https://www.lolifeatureflags.com/reference/ui/",
   "publishConfig": {
     "access": "public"
   },

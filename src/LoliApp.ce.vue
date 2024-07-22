@@ -27,12 +27,12 @@ const prefersDarkMode = ref(false)
 
 const isDarkModeEnabled = computed(() => {
   switch (config.appearance) {
-    case 'system':
-      return prefersDarkMode.value
+    case 'light':
+      return false
     case 'dark':
       return true
     default:
-      return false
+      return prefersDarkMode.value
   }
 })
 

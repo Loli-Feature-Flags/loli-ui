@@ -31213,12 +31213,12 @@ const D$ = /* @__PURE__ */ ct(k$, [["render", P$]]), N$ = { class: "flex flex-co
   setup(e) {
     const t = ln(), n = Y(!1), r = K(() => {
       switch (t.appearance) {
-        case "system":
-          return n.value;
+        case "light":
+          return !1;
         case "dark":
           return !0;
         default:
-          return !1;
+          return n.value;
       }
     });
     function a(s) {
